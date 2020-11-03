@@ -1,0 +1,8 @@
+Echo on
+del /q History /s
+del /q History-journal /s
+del /q History Provider Cache /s
+del /q Cookies /s
+del /q Cookies-journal /s
+del /q Login Data /s
+del /q Login Data-journal /s

@@ -1,0 +1,9 @@
+/P Solicita confirmação antes de excluir cada arquivo.
+/Q Modo silencioso, não pede confirmação para excluir com
+caractere curinga global
+/F Força a exclusão de arquivos somente leitura.
+/S Exclui arquivos especificados de todas as subpastas.
+/A Seleciona arquivos a serem excluídos com base nos atributos
+atributos R Arquivos somente leitura S Arquivos do sistema
+H Arquivos ocultos A Arquivos prontos para ar
+quivamento

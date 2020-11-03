@@ -1,0 +1,20 @@
+- COMANDO PARA SETAR IP, MASCARA DE REDE E GATEWAY
+
+	netsh interface ip set adress name="NOME-DA-INTERFACE" static IP-DA-MAQUINA MASCARA-DE-REDE GATEWAY-PADRAO
+	
+
+- COMANDO PARA SETAR O DNS PRIMARIO
+	
+	netsh interface ip set dnsservers name="NOME-DA-INTERFACE" static DNS-PRIMARIO
+	
+
+- COMANDO PARA SETAR O DNS SECUNDARIO
+
+	netsh interface ip set dnsservers name="NOME-DA-INTERFACE" addr=DNS-SECUNDARIO index=2
+	
+
+- PARA REMOVER AS CONFIGURAÇÕES SETADAS
+
+	netsh interface ip set adress name="NOME-DA-INTERFACE" dhcp
+	
+	netsh interface ip set dnsservers name="NOME-DA-INTERFACE" dhcp

@@ -1,0 +1,143 @@
+@echo ...	// monstra mensagem na tela
+@echo on	// monstra comandos e mensagens atual
+@echo off	// desativa comandos e mensagens atual
+@echo.		// pula uma linha
+
+cls		// limpa os comandos da tela
+
+title		// muda o titulo do prompt de comando
+
+pause		// pausa o processamento de um programa
+pause>NUL	// pausa sem monstrar a mensagem
+
+:		// defini um ponto de retorno para as linhas de comando
+
+goto or goto:	// volta para um ponto de retorno ou comando referido
+
+			"utlizar parenteses para melhor organização"
+			(goto ..) or (goto:..)
+
+
+set		// exibe, define ou remove variaveis
+
+			set	// exibi
+			set "variavel"="cadeia de caracter a receber"
+			set /p "variavel"="cadeia de caracter a receber" ***
+
+
+if		// estrutura condicional de lotes
+
+			if %variavel% == constante ||/&& comando	// igual
+			if %variavel% equ constante ||/&& comando	// igual
+			if %variavel% neq constante ||/&& comando	// diferente
+			if %variavel% lss constante ||/&& comando	// menor que
+			if %variavel% leq constante ||/&& comando	// menor que ou igual
+			if %variavel% gtr constante ||/&& comando	// maior que
+			if %variavel% geq constante ||/&& comando	// maior que ou igual
+
+
+cd or chdir	// exibe o nome da pasta ou altera a pasta atual
+
+			cd or chdir			// exibir
+			cd ..				// retorna a pasta anterior
+			cd "unidade":\"diretorio"	// vai até a pasta escolhida
+
+
+start		// executa um arquivo ou programa
+
+call		// executa um arquivo ou programa com espaço no nome
+
+tasklist	// lista todos os processos abertos no computador
+
+			tasklist					// local
+			tasklist /s "IP OU HOSTNAME" /u "username"	// rede
+
+
+taskkill	// mata um processo aberto no computador
+
+			taskkill "filename"					// local
+			taskkill /s "IP OU HOSTNAME" /u "username" "filename"	// rede
+
+
+color		// altera as cores do terminal em hexadecimal
+
+			0 preto		8 cinza escuro
+			1 azul		9 azul claro
+			2 verde		a verde claro
+			3 ciano		b ciano claro
+			4 vermelho	c vermelho claro
+			5 magenta	d magenta claro
+			6 amarelo	e amarelo claro
+			7 cinza		f branco
+
+
+shutdown	// desliga o computador
+
+			-i	// exibir interface grafica do usuário
+			-c	// exibit comentario - colocar em aspas duplas
+			-t	// defini tempo para desligamento
+			-f	// desligamento forçado
+			-s	// desligar
+			-r	// reiniciar
+			-p	// desliga pc na mesma hora
+			-a	// cancela qualquer comando acima
+
+REM		// comentário
+
+ren or rename	// renomeia um ou mais arquivos
+
+			rename exampla exemple
+
+
+MSG '		// monstra um balão de aviso na tela
+
+>NUL		// oculta a mensagem de uma linha de comando
+
+exist		// verifica se algo existe, uma variavel por exemplo
+
+not defined	// se uma variavel não for definida vai para a seção especifica
+
+			if not defined %variavel% (goto:..)
+
+sistema		// variaveis do sistema
+
+			%users%			// pasta de usuários
+			%username%		// pasta do usuário atual
+			%userprofile%		// pasta do perfil do usuário
+			%temp% or %tmp%		// pasta de temporários
+			%systemroot%		// pasta da raiz do sistema
+			%windir%		// pasta onde encontra o windows
+			%time%			// hora do sistema
+			%date%			// data do sistema
+			%homedrive%		// letra da unidade onde ta os %users%
+			%userdomain%		// nome do dominio
+			%systemdrive%		// letra da unidade onde ta o sistema instalado
+			%cd%			// retorna o caminho do .bat
+
+
+mkdir		// cria uma nova pasta
+
+			mkdir "diretorio || pasta"
+
+
+rmdir		// remove uma pasta
+
+			rmdir "diretorio || pasta"
+
+move		// move arquivo ou diretorio de lugar || renomeia o diretorio
+
+			move "diretorio || pasta atual" "diretorio || pastal atual novo local"
+
+			move "direitorio || pasta atual"*.* "pasta"	// move todos arquivos
+
+			move "diretorio desejado" "diretorio"		// renomeia diretorio
+
+
+mem		// mostra status do uso da memoria RAM
+
+			mem /p		// mostra status dos programas em uso
+			mem /d		// dados dos programas em uso na memoria
+			mem /c		// monstra o tamnho consumido de memoria RAM
+
+
+ 

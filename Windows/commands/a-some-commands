@@ -1,0 +1,57 @@
+@echo ...	// monstra mensagem na tela
+@echo on	// monstra comandos e mensagens atual
+@echo off	// desativa comandos e mensagens atual
+@echo.		// pula uma linha
+
+cls		// limpa os comandos da tela
+
+title		// muda o titulo do prompt de comando
+
+pause		// pausa o processamento de um programa
+pause>NUL	// pausa sem monstrar a mensagem
+
+:		// defini um ponto de retorno para as linhas de comando
+
+goto or goto:	// volta para um ponto de retorno ou comando referido
+
+			"utlizar parenteses para melhor organização"
+			(goto ..) or (goto:..)
+
+
+set		// exibe, define ou remove variaveis
+
+			set	// exibi
+			set "variavel"="cadeia de caracter a receber"
+			set /p "variavel"="cadeia de caracter a receber" ***
+
+
+if		// estrutura condicional de lotes
+
+			if %variavel% == constante ||/&& comando	// igual
+			if %variavel% equ constante ||/&& comando	// igual
+			if %variavel% neq constante ||/&& comando	// diferente
+			if %variavel% lss constante ||/&& comando	// menor que
+			if %variavel% leq constante ||/&& comando	// menor que ou igual
+			if %variavel% gtr constante ||/&& comando	// maior que
+			if %variavel% geq constante ||/&& comando	// maior que ou igual
+
+
+cd or chdir	// exibe o nome da pasta ou altera a pasta atual
+
+			cd or chdir			// exibir
+			cd ..				// retorna a pasta anterior
+			cd "unidade":\"diretorio"	// vai até a pasta escolhida
+
+
+call		// chama um programa para ser executado
+
+tasklist	// lista todos os processos abertos no computador
+
+			tasklist					// local
+			tasklist /s "IP OU HOSTNAME" /u "username"	// rede
+
+
+taskkill	// mata um processo aberto no computador
+
+			taskkill "filename"					// local
+			taskkill /s "IP OU HOSTNAME" /u "username" "filename"	// rede

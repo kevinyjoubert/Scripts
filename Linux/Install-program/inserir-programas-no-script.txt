@@ -1,0 +1,11 @@
+telegram
+
+sudo apt install telegram-desktop
+
+
+Transmission
+
+sudo apt install transmission
+
+
+
