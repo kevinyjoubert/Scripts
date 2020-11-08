@@ -1,6 +1,6 @@
 #testa se a condição é verdadeira ou falsa
 
-if [[ -d ~/Documentos ]]
+if [[ -d /Documentos ]]
 then
     echo "Diretorio existe"
 else
