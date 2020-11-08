@@ -2,7 +2,7 @@
 
 NUMERO_1=2
 
-NUMERO_2=2
+NUMERO_2=4
 
 echo $(($NUMERO_1+$NUMERO_2))
 
