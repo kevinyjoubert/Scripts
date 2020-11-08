@@ -2,6 +2,12 @@
 
 NUMERO=1
 
+export NUMERO
+
+echo $NUMERO
+
 #OU
 
-export NUMERO=2
+export NUMERO_2=2
+
+echo $NUMERO_2
