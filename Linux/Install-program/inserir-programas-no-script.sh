@@ -1,9 +1,9 @@
-telegram
+echo telegram
 
 sudo apt install telegram-desktop
 
 
-Transmission
+echo Transmission
 
 sudo apt install transmission
 

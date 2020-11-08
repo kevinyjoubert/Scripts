@@ -171,16 +171,9 @@ clear
 echo
 echo "		| --- Preparando para instalar o grub-customizer --- |"
 echo
-echo "		        | --- Adicionando o repositorio --- |"
-echo
 
-if ! sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-then
-	echo "Falha ao adicionar o repositorio"
-exit 1
-fi
 
-if ! sudo apt update
+if ! sudo apt upgrade
 then
 	echo "Falha ao atualizar o sistema, verificar!"
 exit 1
