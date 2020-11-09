@@ -1,0 +1,9 @@
+Preferir organizar o script por variaveis e funcoes
+
+
+usar o $HOME ou $USER para identificar o diretorio home do usuario
+
+
+*.deb ou qualquer outro pacote, faz a instalação, compilação e etc de todos pacotes
+
+
