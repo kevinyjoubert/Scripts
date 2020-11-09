@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 for i in $(seq 10)
 do
     echo "Numero no for: $i"
@@ -7,7 +9,7 @@ echo
 
 l=0
 
-while [ $l -lt 10 ]]
+while [ $l -lt 10 ]
 do
     echo "Numero no while: $l"
     l=$(($l+1))
