@@ -7,3 +7,10 @@
 lla () {ls -la}
 
 export lla
+
+
+atualizando_sistema () {
+    sudo apt update
+}
+
+atualizando_sistema
