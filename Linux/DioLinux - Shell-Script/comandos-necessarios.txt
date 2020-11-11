@@ -7,3 +7,4 @@ usar o $HOME ou $USER para identificar o diretorio home do usuario
 *.deb ou qualquer outro pacote, faz a instalação, compilação e etc de todos pacotes
 
 
+para testar se algo existe ou não, use echo $? se o valor ser retornado como 0 é verdadeiro, se for 1 é falso
