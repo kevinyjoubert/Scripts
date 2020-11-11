@@ -8,3 +8,10 @@ usar o $HOME ou $USER para identificar o diretorio home do usuario
 
 
 para testar se algo existe ou não, use echo $? se o valor ser retornado como 0 é verdadeiro, se for 1 é falso
+
+
+maioria dos comandos tem -q como quiet, que seria executar o comando sem retornar nenhuma mensagem e depois validar se é true ou false pelo comando echo $? ou condicionais
+
+
+para enviar qualquer tipo de comando para o espaço, digite no final &> /dev/null
+
