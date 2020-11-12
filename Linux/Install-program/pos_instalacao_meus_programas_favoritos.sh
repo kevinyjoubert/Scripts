@@ -108,7 +108,7 @@ baixando_e_instalando_pacotes_deb () {
                     sudo dpkg -i $DIRETORIO_PROGRAMAS_BAIXADOS/${URL##*/} &> /dev/nul
                 else
                     echo
-                    echo -e "${COR_VERDE}[INFO] - O programa $url_extraida já está instalado.${COR_ORIGINAL}"
+                    echo -e "${COR_VERDE}[DONE] - O programa $url_extraida já está instalado.${COR_ORIGINAL}"
                     echo
                 fi
         done
@@ -132,10 +132,33 @@ baixando_e_instalando_pacotes_wget_deb_O () {
                         then
                             wget -O ${nomes_deb} ${url_pacote_deb_o} &> /dev/null
                         else
-                            echo "Programa ja instalado"
+                            echo -e "${COR_VERDE}[DONE] - O programa ${pacote_instalado} já está instalado${COR_ORIGINAL}"
                         fi
                 done
         done
+}
+
+baixando_e_instalando_pacotes_curl () {
+    
+    if ! dpkg -l | grep -q curl
+        then
+            echo -e "${COR_AMARELA}[INSTALANDO] - Instalando o Curl${COR_ORIGINAL}"
+            sudo apt install curl -y &> /dev/null
+            echo -e "${COR_VERDE}[DONE] - O programa curl foi instalado${COR_ORIGINAL}"
+        else
+            echo -e "${COR_VERDE}[DONE] - O programa curl já está instalado${COR_ORIGINAL}"
+        fi
+
+    for url_curl in ${PACOTES_CURL[@]}
+        do
+            if ! curl ${url_curl} &> /dev/null
+                then
+                    echo "${COR_VERMELHA}[ERROR] - Verifique a URL do Curl (${url_curl})${COR_ORGINAL}"
+                else
+                    echo -e "${COR_VERDE}[DONE] - URL do Curl adicionado!${COR_ORIGINAL}"
+                fi
+        done
+                    
 }
 
 
@@ -155,3 +178,4 @@ baixando_e_instalando_pacotes_wget_deb_O () {
 
 # baixando_e_instalando_pacotes_deb
 # baixando_e_instalando_pacotes_wget_deb_O
+baixando_e_instalando_pacotes_curl
