@@ -37,13 +37,21 @@
 # -------------------------------------------------------------------------------
 
 DIRETORIO_PROGRAMAS_BAIXADOS=$HOME/Downloads/Programas
+COR_VERMELHA='\e[1;91m'
+COR_AMARELA='\e[1;93m'
+COR_VERDE='\e[1;92m'
+COR_ORIGINAL='\e[0m'
+
 
 PACOTES_DEB=(
     https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 )
 
 PACOTES_WGET_DEB_O=(
-    discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+    "https://discordapp.com/api/download?platform=linux&format=deb"
+)
+NOMES_DOS_PACOTES_WGET_DEB_O=(
+    discord.deb
 )
 
 PACOTES_CURL=(
@@ -95,16 +103,39 @@ baixando_e_instalando_pacotes_deb () {
             
             if ! dpkg -l | grep -q $url_extraida
                 then
-                    wget -c "$URL" -P "$DIRETORIO_PROGRAMAS_BAIXADOS"
-                    sudo dpkg -i $DIRETORIO_PROGRAMAS_BAIXADOS/${URL##*/}
+                    echo -e "${COR_AMARELA}[INSTALANDO] - Instalando o programa $url_extraida. ${COR_ORIGINAL}"
+                    wget -c "$URL" -P "$DIRETORIO_PROGRAMAS_BAIXADOS" &> /dev/null
+                    sudo dpkg -i $DIRETORIO_PROGRAMAS_BAIXADOS/${URL##*/} &> /dev/nul
                 else
                     echo
-                    echo "[INFO] O programa $url_extraida já está instalado."
+                    echo -e "${COR_VERDE}[INFO] - O programa $url_extraida já está instalado.${COR_ORIGINAL}"
                     echo
                 fi
         done
 
-        sudo apt -f install -y
+        if ! sudo apt -f install -y &> /dev/null
+            then
+                echo -e "${COR_VERMELHA}[ERROR] - Problema ao instalar as dependências (apt -f install)${COR_ORIGINAL}"
+                exit 1
+            fi
+}
+
+baixando_e_instalando_pacotes_wget_deb_O () {
+    
+    for url_pacote_deb_o in ${PACOTES_WGET_DEB_O[@]}
+        do
+            for nomes_deb in ${NOMES_DOS_PACOTES_WGET_DEB_O[@]}
+                do
+                    pacote_instalado=$(echo ${nomes_deb} | cut -d . -f 1)
+
+                    if ! dpkg -l | grep -q $pacote_instalado
+                        then
+                            wget -O ${nomes_deb} ${url_pacote_deb_o} &> /dev/null
+                        else
+                            echo "Programa ja instalado"
+                        fi
+                done
+        done
 }
 
 
@@ -122,7 +153,5 @@ baixando_e_instalando_pacotes_deb () {
 
 
 
-
-
-
-baixando_e_instalando_pacotes_deb
+# baixando_e_instalando_pacotes_deb
+# baixando_e_instalando_pacotes_wget_deb_O
