@@ -19,7 +19,7 @@
 #
 #   Abra o terminal aonde se encontra o arquivo e execute o comando abaixo:
 #
-#      $  ./pos_instalação_meus_programas_favoritos.sh
+#      $  ./pos_instalacao_meus_programas_favoritos.sh
 #
 #
 # -NOTA:
@@ -74,7 +74,7 @@ ADICIONANDO_REPOSITORIOS=(
 )
 
 ACOES_SUDO_TEE=(
-    tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc # &> /dev/null
+    tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc #repositorio do github
 )
 
 ACOES_INSTALL_O=(
@@ -178,4 +178,4 @@ baixando_e_instalando_pacotes_curl () {
 
 # baixando_e_instalando_pacotes_deb
 # baixando_e_instalando_pacotes_wget_deb_O
-baixando_e_instalando_pacotes_curl
+# baixando_e_instalando_pacotes_curl
