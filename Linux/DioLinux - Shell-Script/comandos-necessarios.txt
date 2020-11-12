@@ -1,3 +1,6 @@
+para executar o bash pode ser usado tanto #!/bin/bash ou #!/usr/bin/env bash
+
+
 Preferir organizar o script por variaveis e funcoes
 
 
