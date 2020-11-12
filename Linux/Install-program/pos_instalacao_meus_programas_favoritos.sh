@@ -36,19 +36,23 @@
 #
 # -------------------------------------------------------------------------------
 
+DIRETORIO_PROGRAMAS_BAIXADOS=$HOME/Downloads/Programas
+
 PACOTES_DEB=(
     https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    https://discordapp.com/api/download?platform=linux&format=deb
-    https://launchpad.net/ubuntu/+archive/primary/+files/gnome-tweak-tool_3.26.2.1-1ubuntu1_all.deb -O gnome-tweak-tool.deb
+)
+
+PACOTES_WGET_DEB_O=(
+    discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 )
 
 PACOTES_CURL=(
-    https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+    https://packages.microsoft.com/keys/microsoft.asc # | gpg --dearmor > microsoft.gpg
 )
 
 PACOTES_WGET_qO=(
     https://packagecloud.io/shiftkey/desktop/gpgkey
-    https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+    https://packages.microsoft.com/keys/microsoft.asc # | gpg --dearmor > packages.microsoft.gpg
 )
 
 PACOTES_SH=(
@@ -61,22 +65,64 @@ ADICIONANDO_REPOSITORIOS=(
 
 )
 
+ACOES_SUDO_TEE=(
+    tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc # &> /dev/null
+)
+
+ACOES_INSTALL_O=(
+    packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+)
+
 PROGRAMAS_VIA_APT=(
     microsoft-edge-dev
     grub-customizer
     cmatrix
     fortunes-br
     virtualbox virtualbox-ext-pack
-    software-properties-common apt-transport-https && code #vscode
+    software-properties-common apt-transport-https #vscode
+    code #vscode
     telegram-desktop
     transmission
     github-desktop
 )
 
-AÇÕES_SUDO_TEE=(
-    tee /etc/apt/trusted.gpg.d/shiftkey-desktop.asc > /dev/null
-)
 
-AÇÕES_INSTALL_O=(
-    packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-)
+
+baixando_e_instalando_pacotes_deb () {
+    for URL in ${PACOTES_DEB[@]}
+        do
+            url_extraida=$(echo ${URL##*/} | sed 's/-/_/g' | cut -d _ -f 1)
+            
+            if ! dpkg -l | grep -q $url_extraida
+                then
+                    wget -c "$URL" -P "$DIRETORIO_PROGRAMAS_BAIXADOS"
+                    sudo dpkg -i $DIRETORIO_PROGRAMAS_BAIXADOS/${URL##*/}
+                else
+                    echo
+                    echo "[INFO] O programa $url_extraida já está instalado."
+                    echo
+                fi
+        done
+
+        sudo apt -f install -y
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+baixando_e_instalando_pacotes_deb
