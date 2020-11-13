@@ -86,6 +86,22 @@ cls
 @echo.
 
 set /p Destino="Digite o caminho completo da pasta de Destino: "
+
+@echo off
+REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%Destino%" (
+    @echo.
+    @echo [INFO] - Pasta definida com sucesso!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %Destino%
+)
+
 @echo.
 @echo.
 set /p opcao-1-1="Digite m para voltar ao menu ou 0 para sair do script: "
