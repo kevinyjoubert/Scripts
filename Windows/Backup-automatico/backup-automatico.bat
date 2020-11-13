@@ -58,6 +58,16 @@ set Destino=X:\Backup\teste-backup
 @echo  Obs: Caso queira mudar o local de Origem, abra o editavel do .bat
 
 
+set /p opcao="Digite o número da opção: "
+
+if "%opcao%" equ 1 (goto:opcao-1)
+if "%opcao%" equ 2 (goto:opcao-2)
+if "%opcao%" equ 3 (goto:opcao-3)
+if "%opcao%" equ 4 (goto:opcao-4)
+if "%opcao%" equ 5 (goto:opcao-5)
+if "%opcao%" equ 6 (goto:opcao-6)
+if "%opcao%" equ 7 (goto:opcao-7)
+
 
 
 
