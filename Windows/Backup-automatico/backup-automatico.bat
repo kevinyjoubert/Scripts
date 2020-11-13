@@ -1,4 +1,4 @@
-REM!/bin/bash
+@echo off
 REM
 REM pos_instalação_meus_programas_favoritos.sh - Faz a instalação dos programas 
 REM que costumo utilizar no Linux
@@ -36,6 +36,31 @@ REM       - Primeira versão com poucos programas
 REM
 REM -------------------------------------------------------------------------------
 
-
+REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui
 set Origem=C:\Users\Public\Wallpaper
 set Destino=X:\Backup\teste-backup
+
+@echo                          ___________________________________________________
+@echo                          +                                                 +    
+@echo                          +         SCRIPT PARA BACKUP AUTOMATICO           +
+@echo                          + ----------------------------------------------- +
+@echo                          +                                                 +
+@echo                          +  1 - Definir pasta do backup                    +
+@echo                          +  2 - Backup do usuario atual                    +
+@echo                          +  3 - Backup de todos os usuarios                +
+@echo                          +  4 - Backup somente de fotos                    +
+@echo                          +  5 - Backup somente de musicas                  +
+@echo                          +  6 - Backup somente de videos                   +
+@echo                          +  7 - Backup somente de arquivos alterados       +
+@echo                          +                                                 +
+@echo                          +_________________________________________________+
+
+
+
+
+
+
+
+
+
+pause
