@@ -39,6 +39,7 @@ REM ----------------------------------------------------------------------------
 REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui
 set Origem=C:\Users\Public\Wallpaper
 set Destino=X:\Backup\teste-backup
+set Log-backup=X:\Backup\
 
 REM menu para opcoes de backup
 :MENU
