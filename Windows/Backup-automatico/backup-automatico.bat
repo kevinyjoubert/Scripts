@@ -40,6 +40,9 @@ REM Para mudar o local de origem do backup e o destino pra onde envia, altere aq
 set Origem=C:\Users\Public\Wallpaper
 set Destino=X:\Backup\teste-backup
 
+REM menu para opcoes de backup
+:MENU
+cls
 @echo   ___________________________________________________
 @echo   +                                                 +    
 @echo   +         SCRIPT PARA BACKUP AUTOMATICO           +
@@ -52,13 +55,17 @@ set Destino=X:\Backup\teste-backup
 @echo   +  5 - Backup somente de musicas                  +
 @echo   +  6 - Backup somente de videos                   +
 @echo   +  7 - Backup somente de arquivos alterados       +
+@echo   +  0 - Sair do script                             +
 @echo   +                                                 +
 @echo   +_________________________________________________+
 @echo.
 @echo  Obs: Caso queira mudar o local de Origem, abra o editavel do .bat
+@echo.
+@echo.
 
-
-set /p opcao="Digite o número da opção: "
+@echo off
+REM condicional para opcoes
+set /p opcao="Digite o numero da opcao: "
 
 if "%opcao%" equ 1 (goto:opcao-1)
 if "%opcao%" equ 2 (goto:opcao-2)
@@ -67,7 +74,24 @@ if "%opcao%" equ 4 (goto:opcao-4)
 if "%opcao%" equ 5 (goto:opcao-5)
 if "%opcao%" equ 6 (goto:opcao-6)
 if "%opcao%" equ 7 (goto:opcao-7)
+if "%opcao%" equ 0 (goto:opcao-0)
 
+
+REM opcoes dos backups
+
+:opcao-1
+cls
+@echo +---- Opcao 1 - Definir pasta do backup ----+
+@echo.
+
+set /p Destino="Digite o caminho completo da pasta de Destino: "
+@echo.
+@echo.
+set /p opcao-1-1="Digite m para voltar ao menu ou 0 para sair do script: "
+
+if "%opcao-1-1%" equ "m" (goto:menu)
+if "%opcao-1-1%" equ "M" (goto:menu)
+if "%opcao-1-1%" equ "0" (goto:opcao-0)
 
 
 
