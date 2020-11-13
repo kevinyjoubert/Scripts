@@ -40,21 +40,22 @@ REM Para mudar o local de origem do backup e o destino pra onde envia, altere aq
 set Origem=C:\Users\Public\Wallpaper
 set Destino=X:\Backup\teste-backup
 
-@echo                          ___________________________________________________
-@echo                          +                                                 +    
-@echo                          +         SCRIPT PARA BACKUP AUTOMATICO           +
-@echo                          + ----------------------------------------------- +
-@echo                          +                                                 +
-@echo                          +  1 - Definir pasta do backup                    +
-@echo                          +  2 - Backup do usuario atual                    +
-@echo                          +  3 - Backup de todos os usuarios                +
-@echo                          +  4 - Backup somente de fotos                    +
-@echo                          +  5 - Backup somente de musicas                  +
-@echo                          +  6 - Backup somente de videos                   +
-@echo                          +  7 - Backup somente de arquivos alterados       +
-@echo                          +                                                 +
-@echo                          +_________________________________________________+
-
+@echo   ___________________________________________________
+@echo   +                                                 +    
+@echo   +         SCRIPT PARA BACKUP AUTOMATICO           +
+@echo   + ----------------------------------------------- +
+@echo   +                                                 +
+@echo   +  1 - Definir pasta do backup                    +
+@echo   +  2 - Backup do usuario atual                    +
+@echo   +  3 - Backup de todos os usuarios                +
+@echo   +  4 - Backup somente de fotos                    +
+@echo   +  5 - Backup somente de musicas                  +
+@echo   +  6 - Backup somente de videos                   +
+@echo   +  7 - Backup somente de arquivos alterados       +
+@echo   +                                                 +
+@echo   +_________________________________________________+
+@echo.
+@echo  Obs: Caso queira mudar o local de Origem, abra o editavel do .bat
 
 
 
