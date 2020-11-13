@@ -37,9 +37,14 @@ REM
 REM -------------------------------------------------------------------------------
 
 REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui
-set Origem=C:\Users\Public\Wallpaper
-set Destino=X:\Backup\teste-backup
-set Log-backup=X:\Backup\
+set ORIGEM=C:\Users\Public\Wallpaper
+set DESTINO=X:\Backup\teste-backup
+
+REM Verificar aonde sera salvo o arquivo log dos backup, pode ser alterado aqui ou deixar padrao
+set LOG-BACKUP=X:\Backup\
+
+REM cor do terminal
+color a
 
 REM menu para opcoes de backup
 :MENU
@@ -85,11 +90,11 @@ cls
 @echo +---- Opcao 1 - Definir pasta do backup ----+
 @echo.
 
-set /p Destino="Digite o caminho completo da pasta de Destino: "
+set /p DESTINO="Digite o caminho completo da pasta de Destino: "
 
 @echo off
 REM condicional para verificar se a pasta existe, se nao cria a mesma
-IF EXIST "%Destino%" (
+IF EXIST "%DESTINO%" (
     @echo.
     @echo [INFO] - Pasta definida com sucesso!
     @echo.
@@ -99,24 +104,55 @@ IF EXIST "%Destino%" (
     @echo.
 
     @echo off
-    mkdir %Destino%
+    mkdir %DESTINO%
 )
 
 @echo.
 @echo.
 set /p opcao-1-1="Digite m para voltar ao menu ou 0 para sair do script: "
 
-if "%opcao-1-1%" equ "m" (goto:menu)
-if "%opcao-1-1%" equ "M" (goto:menu)
+if "%opcao-1-1%" equ "m" (goto:MENU)
+if "%opcao-1-1%" equ "M" (goto:MENU)
 if "%opcao-1-1%" equ "0" (goto:opcao-0)
 
 
 :opcao-2
 cls
+@echo.
 @echo +---- Opcao 2 - Backup do usuario atual ----+
 @echo.
 @echo.
+ping -n 2 0 >NUL
 @echo O usuario atual se localiza no Destino: %userprofile%
+@echo.
+@echo.
+ping -n 4 0 >NUL
+@echo [ATENCAO] - Sera feito backup de todos os arquivos da pasta do usuario "%username%"
+set /p continuar=Deseja continuar? (s/n)
+
+if "%continuar%" equ "n" (goto:MENU)
+if "%continuar%" equ "N" (goto:MENU)
+
+cls
+@echo.
+@echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
+
+@echo off
+
+robocopy "%userprofile%" "%DESTINO%" /E /V /COPYALL /R:3 /W:10 /LOG:%LOG-BACKUP%\log-backup.txt
+start %LOG-BACKUP%\log-backup.txt
+
+cls
+@echo.
+@echo Backup finalizado, janela sera encerrada em breve!
+@echo off
+ping -n 10 0 >NUL
+goto:opcao-0
+
+
+
+:opcao-3
+
 
 
 
