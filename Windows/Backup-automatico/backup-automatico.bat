@@ -67,14 +67,14 @@ cls
 REM condicional para opcoes
 set /p opcao="Digite o numero da opcao: "
 
-if "%opcao%" equ 1 (goto:opcao-1)
-if "%opcao%" equ 2 (goto:opcao-2)
-if "%opcao%" equ 3 (goto:opcao-3)
-if "%opcao%" equ 4 (goto:opcao-4)
-if "%opcao%" equ 5 (goto:opcao-5)
-if "%opcao%" equ 6 (goto:opcao-6)
-if "%opcao%" equ 7 (goto:opcao-7)
-if "%opcao%" equ 0 (goto:opcao-0)
+if "%opcao%" equ "1" (goto:opcao-1)
+if "%opcao%" equ "2" (goto:opcao-2)
+if "%opcao%" equ "3" (goto:opcao-3)
+if "%opcao%" equ "4" (goto:opcao-4)
+if "%opcao%" equ "5" (goto:opcao-5)
+if "%opcao%" equ "6" (goto:opcao-6)
+if "%opcao%" equ "7" (goto:opcao-7)
+if "%opcao%" equ "0" (goto:opcao-0)
 
 
 REM opcoes dos backups
@@ -93,6 +93,13 @@ if "%opcao-1-1%" equ "m" (goto:menu)
 if "%opcao-1-1%" equ "M" (goto:menu)
 if "%opcao-1-1%" equ "0" (goto:opcao-0)
 
+
+:opcao-2
+cls
+@echo +---- Opcao 2 - Backup do usuario atual ----+
+@echo.
+@echo.
+@echo O usuario atual se localiza no Destino: %userprofile%
 
 
 
