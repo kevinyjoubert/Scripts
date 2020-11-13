@@ -37,11 +37,11 @@ REM
 REM -------------------------------------------------------------------------------
 
 REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui
-set ORIGEM=C:\Users\Public\Wallpaper
-set DESTINO=X:\Backup\teste-backup
+set ORIGEM=C:\Users
+set DESTINO=D:\Backup\Arquivos
 
 REM Verificar aonde sera salvo o arquivo log dos backup, pode ser alterado aqui ou deixar padrao
-set LOG-BACKUP=X:\Backup\
+set LOG-BACKUP=D:\Backup\
 
 REM cor do terminal
 color a
@@ -133,6 +133,27 @@ set /p continuar=Deseja continuar? (s/n)
 if "%continuar%" equ "n" (goto:MENU)
 if "%continuar%" equ "N" (goto:MENU)
 
+@echo.
+@echo Verificando se a pasta do Destino existe, se não a mesma será criada
+@echo.
+ping -n 4 0 >NUL
+
+@echo off
+REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%DESTINO%" (
+    @echo.
+    @echo [INFO] - Pasta existe!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %DESTINO%
+)
+
+
 cls
 @echo.
 @echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
@@ -152,7 +173,12 @@ goto:opcao-0
 
 
 :opcao-3
-
+cls
+@echo.
+@echo +---- Opcao 3 - Backup de todos os usuarios ----+
+@echo.
+@echo.
+ping -n 2 0 >NUL
 
 
 
