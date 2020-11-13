@@ -153,7 +153,6 @@ IF EXIST "%DESTINO%" (
     mkdir %DESTINO%
 )
 
-
 cls
 @echo.
 @echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
