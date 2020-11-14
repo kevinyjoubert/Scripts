@@ -709,7 +709,7 @@ cls
 
 @echo off
 
-robocopy "%ORIGEM%" "%DESTINO%" /E /V /COPYALL /R:3 /W:10 /LOG:%LOG-BACKUP%\log-backup.txt
+robocopy "%ORIGEM%" "%DESTINO%" /E /V /XO /COPYALL /R:3 /W:10 /LOG:%LOG-BACKUP%\log-backup.txt
 
 start %LOG-BACKUP%\log-backup.txt
 
