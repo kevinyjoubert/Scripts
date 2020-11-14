@@ -1,52 +1,55 @@
 @echo off
-REM
-REM pos_instalação_meus_programas_favoritos.sh - Faz a instalação dos programas 
-REM que costumo utilizar no Linux
-REM
-REM Github:       https://github.com/kevinyjoubert
-REM Linkedin:     https://www.linkedin.com/in/keviny-joubert-2992b8b1/
-REM Autor:        Keviny Joubert
-REM
-REM -------------------------------------------------------------------------------
-REM
-REM -O QUE O SCRIPT FAZ?
-REM
-REM   Esse script instala os programas que utilizo após a formatação, faz upgrade
-REM  e limpeza do sistema. 
-REM
-REM
-REM -COMO USAR?
-REM
-REM   Abra o terminal aonde se encontra o arquivo e execute o comando abaixo:
-REM
-REM      $  ./pos_instalação_meus_programas_favoritos.sh
-REM
-REM
-REM -NOTA:
-REM
-REM   O Script foi pensado para ter uma boa organização, fácil manutenção e para
-REM  quem queira editar ao seu uso!
-REM
-REM -------------------------------------------------------------------------------
-REM
-REM -Changelog:
-REM
-REM   v1.0 DATA, Keviny Joubert:
-REM       - Primeira versão com poucos programas
-REM
-REM -------------------------------------------------------------------------------
+@REM
+@REM pos_instalação_meus_programas_favoritos.sh - Faz a instalação dos programas 
+@REM que costumo utilizar no Linux
+@REM
+@REM Github:       https://github.com/kevinyjoubert
+@REM Linkedin:     https://www.linkedin.com/in/keviny-joubert-2992b8b1/
+@REM Autor:        Keviny Joubert
+@REM
+@REM -------------------------------------------------------------------------------
+@REM
+@REM -O QUE O SCRIPT FAZ?
+@REM
+@REM   Esse script instala os programas que utilizo após a formatação, faz upgrade
+@REM  e limpeza do sistema. 
+@REM
+@REM
+@REM -COMO USAR?
+@REM
+@REM   Abra o terminal aonde se encontra o arquivo e execute o comando abaixo:
+@REM
+@REM      $  ./pos_instalação_meus_programas_favoritos.sh
+@REM
+@REM
+@REM -NOTA:
+@REM
+@REM   O Script foi pensado para ter uma boa organização, fácil manutenção e para
+@REM  quem queira editar ao seu uso!
+@REM
+@REM -------------------------------------------------------------------------------
+@REM
+@REM -Changelog:
+@REM
+@REM   v1.0 DATA, Keviny Joubert:
+@REM       - Primeira versão com poucos programas
+@REM
+@REM -------------------------------------------------------------------------------
 
-REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui
+@REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui
 set ORIGEM=C:\Users
 set DESTINO=D:\Backup\Arquivos
 
-REM Verificar aonde sera salvo o arquivo log dos backup, pode ser alterado aqui ou deixar padrao
+@@REM
+set ORIGEM-PC-REMOTO=10.10.10.10
+
+@REM Verificar aonde sera salvo o arquivo log dos backup, pode ser alterado aqui ou deixar padrao
 set LOG-BACKUP=D:\Backup
 
-REM cor do terminal
+@REM cor do terminal
 color a
 
-REM menu para opcoes de backup
+@REM menu para opcoes de backup
 :MENU
 cls
 @echo   ___________________________________________________
@@ -61,6 +64,7 @@ cls
 @echo   +  5 - Backup somente de musicas                  +
 @echo   +  6 - Backup somente de videos                   +
 @echo   +  7 - Backup somente de arquivos alterados       +
+@echo   +  8 - Backup de computador remoto                +
 @echo   +  0 - Sair do script                             +
 @echo   +                                                 +
 @echo   +_________________________________________________+
@@ -70,7 +74,7 @@ cls
 @echo.
 
 @echo off
-REM condicional para opcoes
+@REM condicional para opcoes
 set /p opcao="Digite o numero da opcao: "
 
 if "%opcao%" equ "1" (goto:opcao-1)
@@ -83,7 +87,7 @@ if "%opcao%" equ "7" (goto:opcao-7)
 if "%opcao%" equ "0" (goto:opcao-0)
 
 
-REM opcoes dos backups
+@REM opcoes dos backups
 
 :opcao-1
 cls
@@ -93,7 +97,7 @@ cls
 set /p DESTINO="Digite o caminho completo da pasta de Destino: "
 
 @echo off
-REM condicional para verificar se a pasta existe, se nao cria a mesma
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
 IF EXIST "%DESTINO%" (
     @echo.
     @echo [INFO] - Pasta definida com sucesso!
@@ -140,7 +144,7 @@ if "%continuar%" equ "N" (goto:MENU)
 ping -n 4 0 >NUL
 
 @echo off
-REM condicional para verificar se a pasta existe, se nao cria a mesma
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
 IF EXIST "%DESTINO%" (
     @echo.
     @echo [INFO] - Pasta existe!
@@ -192,7 +196,7 @@ if "%continuar%" equ "N" (goto:MENU)
 ping -n 4 0 >NUL
 
 @echo off
-REM condicional para verificar se a pasta existe, se nao cria a mesma
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
 IF EXIST "%DESTINO%" (
     @echo.
     @echo [INFO] - Pasta existe!
@@ -256,7 +260,58 @@ if "%continuar%" equ "N" (goto:MENU)
 ping -n 4 0 >NUL
 
 @echo off
-REM condicional para verificar se a pasta existe, se nao cria a mesma
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%DESTINO%" (
+    @echo.
+    @echo [INFO] - Pasta existe!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %DESTINO%
+)
+
+cls
+@echo.
+@echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
+
+@echo off
+
+for %%x in (jpg, jfif, gif, bmp, png, psd, tiff, exif, raw, webp, svg, avif) do (
+    xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+    @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+)
+
+start %LOG-BACKUP%\log-backup.txt
+
+cls
+@echo.
+@echo Backup finalizado, janela sera encerrada em breve!
+@echo off
+ping -n 10 0 >NUL
+goto:opcao-0
+
+:usr_todos
+cls
+@echo.
+@echo [ATENCAO] - Sera feito backup das fotos de todos os usuarios, que estao em "%ORIGEM%"
+set /p continuar=Deseja continuar? (s/n)
+
+if "%continuar%" equ "n" (goto:MENU)
+if "%continuar%" equ "N" (goto:MENU)
+
+@echo.
+@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo.
+ping -n 4 0 >NUL
+
+@echo off
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
 IF EXIST "%DESTINO%" (
     @echo.
     @echo [INFO] - Pasta existe!
