@@ -36,12 +36,13 @@
 @REM
 @REM -------------------------------------------------------------------------------
 
-@REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui
+@REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui ou no menu
 set ORIGEM=C:\Users
 set DESTINO=D:\Backup\Arquivos
 
-@@REM
-set ORIGEM-PC-REMOTO=10.10.10.10
+@REM parte para caso seja um computador na rede, editar de acordo ou nas opcoes do menu
+set ORIGEM-PC-REMOTO=\\10.10.10.10\c$\Users
+set DESTINO-PC-REMOTO=D:\Backup\Arquivos
 
 @REM Verificar aonde sera salvo o arquivo log dos backup, pode ser alterado aqui ou deixar padrao
 set LOG-BACKUP=D:\Backup
