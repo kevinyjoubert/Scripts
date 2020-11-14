@@ -283,7 +283,8 @@ cls
 @echo off
 
 for %%x in (jpg, jfif, gif, bmp, png, psd, tiff, exif, raw, webp, svg, avif) do (
-    xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    xcopy %userprofile%\*.%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo %%x >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
     @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
@@ -335,7 +336,8 @@ cls
 @echo off
 
 for %%x in (jpg, jfif, gif, bmp, png, psd, tiff, exif, raw, webp, svg, avif) do (
-    xcopy %ORIGEM%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    xcopy %ORIGEM%\*.%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo %%x >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
     @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
@@ -404,7 +406,8 @@ cls
 @echo off
 
 for %%x in (acc, mp3, ogg, wma, alac, flac, aiff, pcm, wav) do (
-    xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    xcopy %userprofile%\*.%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo %%x >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
     @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
@@ -456,7 +459,8 @@ cls
 @echo off
 
 for %%x in (acc, mp3, ogg, wma, alac, flac, aiff, pcm, wav) do (
-    xcopy %ORIGEM%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    xcopy %ORIGEM%\*.%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo %%x >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
     @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
@@ -473,10 +477,10 @@ goto:opcao-0
 
 
 
-:opcao-5
+:opcao-6
 cls
 @echo.
-@echo +---- Opcao 5 - Backup somente de musicas ----+
+@echo +---- Opcao 6 - Backup somente de videos ----+
 @echo.
 @echo.
 @echo off
@@ -492,7 +496,7 @@ if "%qual_usr%" equ "0" (goto:MENU)
 :usr_atual
 cls
 @echo.
-@echo [ATENCAO] - Sera feito backup de todas as musicas da pasta do usuario "%username%"
+@echo [ATENCAO] - Sera feito backup de todas os videos da pasta do usuario "%username%"
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
@@ -524,8 +528,9 @@ cls
 
 @echo off
 
-for %%x in (acc, mp3, ogg, wma, alac, flac, aiff, pcm, wav) do (
-    xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+for %%x in (wmv, avi, flv, mov, rmvb, mpg, mpeg, mkv, mp4, qt, avchd, swf, ts, divx, ogm, h.264, vob) do (
+    xcopy %userprofile%\*.%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo %%x >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
     @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
@@ -544,7 +549,7 @@ goto:opcao-0
 :usr_todos
 cls
 @echo.
-@echo [ATENCAO] - Sera feito backup das musicas de todos os usuarios, que estao em "%ORIGEM%"
+@echo [ATENCAO] - Sera feito backup dos videos de todos os usuarios, que estao em "%ORIGEM%"
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
@@ -576,8 +581,9 @@ cls
 
 @echo off
 
-for %%x in (acc, mp3, ogg, wma, alac, flac, aiff, pcm, wav) do (
-    xcopy %ORIGEM%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+for %%x in (wmv, avi, flv, mov, rmvb, mpg, mpeg, mkv, mp4, qt, avchd, swf, ts, divx, ogm, h.264, vob) do (
+    xcopy %ORIGEM%\*.%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo %%x >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
     @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
