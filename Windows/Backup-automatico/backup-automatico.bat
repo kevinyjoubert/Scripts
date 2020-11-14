@@ -41,7 +41,7 @@ set ORIGEM=C:\Users
 set DESTINO=D:\Backup\Arquivos
 
 REM Verificar aonde sera salvo o arquivo log dos backup, pode ser alterado aqui ou deixar padrao
-set LOG-BACKUP=D:\Backup\
+set LOG-BACKUP=D:\Backup
 
 REM cor do terminal
 color a
@@ -277,15 +277,20 @@ cls
 @echo off
 
 for %%x in (jpg, jfif, gif, bmp, png, psd, tiff, exif, raw, webp, svg, avif) do (
-    xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> log-backup.txt
-    @echo. >> log-backup.txt
-    @echo -------------------------------------------------------------- >> log-backup.txt
-    @echo. >> log-backup.txt
+    xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+    @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
 )
 
 start %LOG-BACKUP%\log-backup.txt
 
-
+cls
+@echo.
+@echo Backup finalizado, janela sera encerrada em breve!
+@echo off
+ping -n 10 0 >NUL
+goto:opcao-0
 
 
 
