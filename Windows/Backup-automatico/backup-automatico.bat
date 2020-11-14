@@ -85,6 +85,7 @@ if "%opcao%" equ "4" (goto:opcao-4)
 if "%opcao%" equ "5" (goto:opcao-5)
 if "%opcao%" equ "6" (goto:opcao-6)
 if "%opcao%" equ "7" (goto:opcao-7)
+if "%opcao%" equ "8" (goto:opcao-8)
 if "%opcao%" equ "0" (goto:opcao-0)
 
 
