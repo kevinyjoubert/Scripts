@@ -722,6 +722,16 @@ goto:opcao-0
 
 
 
+:opcao-8
+cls
+@echo.
+@echo +---- Opcao 8 - Backup de computador remoto ----+
+@echo.
+@echo.
+ping -n 2 0 >NUL
+
+
+
 
 
 
