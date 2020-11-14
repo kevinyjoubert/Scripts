@@ -70,7 +70,7 @@ cls
 @echo   +                                                 +
 @echo   +_________________________________________________+
 @echo.
-@echo  Obs: Caso queira mudar o local de Origem, abra o editavel do .bat
+@echo  Obs: Para deixar as pastas padrao, altere dentro do script ou utilize as opcoes
 @echo.
 @echo.
 
