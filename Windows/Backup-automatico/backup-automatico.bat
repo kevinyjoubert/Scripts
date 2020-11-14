@@ -677,7 +677,7 @@ goto:opcao-0
 :usr_todos
 cls
 @echo.
-@echo [ATENCAO] - Sera feito backup de todas os arquivos da pasta do usuario "%username%"
+@echo [ATENCAO] - Sera feito backup de todos os arquivos da pasta "%ORIGEM%", onde econtra-se todos os usuarios
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
