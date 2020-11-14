@@ -298,6 +298,7 @@ cls
 ping -n 10 0 >NUL
 goto:opcao-0
 
+
 :usr_todos
 cls
 @echo.
@@ -334,6 +335,75 @@ cls
 @echo off
 
 for %%x in (jpg, jfif, gif, bmp, png, psd, tiff, exif, raw, webp, svg, avif) do (
+    xcopy %ORIGEM%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+    @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+)
+
+start %LOG-BACKUP%\log-backup.txt
+
+cls
+@echo.
+@echo Backup finalizado, janela sera encerrada em breve!
+@echo off
+ping -n 10 0 >NUL
+goto:opcao-0
+
+
+
+:opcao-5
+cls
+@echo.
+@echo +---- Opcao 5 - Backup somente de musicas ----+
+@echo.
+@echo.
+@echo off
+ping -n 2 0 >NUL
+set /p qual_usr="Defina se deseja para o usuario atual ou todos usuarios(A=Usuario atual / T=Todos usuarios): "
+
+if "%qual_usr%" equ "a" (goto:usr_atual)
+if "%qual_usr%" equ "A" (goto:usr_atual)
+if "%qual_usr%" equ "t" (goto:usr_todos)
+if "%qual_usr%" equ "T" (goto:usr_todos)
+if "%qual_usr%" equ "0" (goto:MENU)
+
+:usr_atual
+cls
+@echo.
+@echo [ATENCAO] - Sera feito backup de todas as musicas da pasta do usuario "%username%"
+set /p continuar=Deseja continuar? (s/n)
+
+if "%continuar%" equ "n" (goto:MENU)
+if "%continuar%" equ "N" (goto:MENU)
+
+@echo.
+@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo.
+ping -n 4 0 >NUL
+
+@echo off
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%DESTINO%" (
+    @echo.
+    @echo [INFO] - Pasta existe!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %DESTINO%
+)
+
+cls
+@echo.
+@echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
+
+@echo off
+
+for %%x in (acc, mp3, ogg, wma, alac, flac, aiff, pcm, wav) do (
     xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
     @echo. >> %LOG-BACKUP%\log-backup.txt
     @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
@@ -348,6 +418,187 @@ cls
 @echo off
 ping -n 10 0 >NUL
 goto:opcao-0
+
+
+:usr_todos
+cls
+@echo.
+@echo [ATENCAO] - Sera feito backup das musicas de todos os usuarios, que estao em "%ORIGEM%"
+set /p continuar=Deseja continuar? (s/n)
+
+if "%continuar%" equ "n" (goto:MENU)
+if "%continuar%" equ "N" (goto:MENU)
+
+@echo.
+@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo.
+ping -n 4 0 >NUL
+
+@echo off
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%DESTINO%" (
+    @echo.
+    @echo [INFO] - Pasta existe!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %DESTINO%
+)
+
+cls
+@echo.
+@echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
+
+@echo off
+
+for %%x in (acc, mp3, ogg, wma, alac, flac, aiff, pcm, wav) do (
+    xcopy %ORIGEM%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+    @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+)
+
+start %LOG-BACKUP%\log-backup.txt
+
+cls
+@echo.
+@echo Backup finalizado, janela sera encerrada em breve!
+@echo off
+ping -n 10 0 >NUL
+goto:opcao-0
+
+
+
+:opcao-5
+cls
+@echo.
+@echo +---- Opcao 5 - Backup somente de musicas ----+
+@echo.
+@echo.
+@echo off
+ping -n 2 0 >NUL
+set /p qual_usr="Defina se deseja para o usuario atual ou todos usuarios(A=Usuario atual / T=Todos usuarios): "
+
+if "%qual_usr%" equ "a" (goto:usr_atual)
+if "%qual_usr%" equ "A" (goto:usr_atual)
+if "%qual_usr%" equ "t" (goto:usr_todos)
+if "%qual_usr%" equ "T" (goto:usr_todos)
+if "%qual_usr%" equ "0" (goto:MENU)
+
+:usr_atual
+cls
+@echo.
+@echo [ATENCAO] - Sera feito backup de todas as musicas da pasta do usuario "%username%"
+set /p continuar=Deseja continuar? (s/n)
+
+if "%continuar%" equ "n" (goto:MENU)
+if "%continuar%" equ "N" (goto:MENU)
+
+@echo.
+@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo.
+ping -n 4 0 >NUL
+
+@echo off
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%DESTINO%" (
+    @echo.
+    @echo [INFO] - Pasta existe!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %DESTINO%
+)
+
+cls
+@echo.
+@echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
+
+@echo off
+
+for %%x in (acc, mp3, ogg, wma, alac, flac, aiff, pcm, wav) do (
+    xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+    @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+)
+
+start %LOG-BACKUP%\log-backup.txt
+
+cls
+@echo.
+@echo Backup finalizado, janela sera encerrada em breve!
+@echo off
+ping -n 10 0 >NUL
+goto:opcao-0
+
+
+:usr_todos
+cls
+@echo.
+@echo [ATENCAO] - Sera feito backup das musicas de todos os usuarios, que estao em "%ORIGEM%"
+set /p continuar=Deseja continuar? (s/n)
+
+if "%continuar%" equ "n" (goto:MENU)
+if "%continuar%" equ "N" (goto:MENU)
+
+@echo.
+@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo.
+ping -n 4 0 >NUL
+
+@echo off
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%DESTINO%" (
+    @echo.
+    @echo [INFO] - Pasta existe!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %DESTINO%
+)
+
+cls
+@echo.
+@echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
+
+@echo off
+
+for %%x in (acc, mp3, ogg, wma, alac, flac, aiff, pcm, wav) do (
+    xcopy %ORIGEM%\*%%x %DESTINO% /s /c /y >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+    @echo -------------------------------------------------------------- >> %LOG-BACKUP%\log-backup.txt
+    @echo. >> %LOG-BACKUP%\log-backup.txt
+)
+
+start %LOG-BACKUP%\log-backup.txt
+
+cls
+@echo.
+@echo Backup finalizado, janela sera encerrada em breve!
+@echo off
+ping -n 10 0 >NUL
+goto:opcao-0
+
+
+
+
+
+
+
+
 
 
 
