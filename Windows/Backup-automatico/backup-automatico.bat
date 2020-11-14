@@ -276,9 +276,10 @@ cls
 
 @echo off
 
-for %%x in (jpg, jfif, gif, bmp, png, psd, tiff, exif, raw, webp, svg, avif) 
-do (
+for %%x in (jpg, jfif, gif, bmp, png, psd, tiff, exif, raw, webp, svg, avif) do (
     xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> log-backup.txt
+    @echo. >> log-backup.txt
+    @echo -------------------------------------------------------------- >> log-backup.txt
     @echo. >> log-backup.txt
 )
 
