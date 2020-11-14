@@ -729,7 +729,9 @@ cls
 @echo.
 @echo.
 ping -n 2 0 >NUL
-
+@echo Confirme se as pastas estao corretas:
+@echo Pasta do Computador remoto, onde esta os arquivos: %ORIGEM-PC-REMOTO%
+@echo Pasta para onde ira os arquivos do Backup: %DESTINO-PC-REMOTO%
 
 
 
