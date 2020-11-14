@@ -116,6 +116,7 @@ if "%opcao-1-1%" equ "M" (goto:MENU)
 if "%opcao-1-1%" equ "0" (goto:opcao-0)
 
 
+
 :opcao-2
 cls
 @echo.
@@ -160,6 +161,7 @@ cls
 @echo off
 
 robocopy "%userprofile%" "%DESTINO%" /E /V /COPYALL /R:3 /W:10 /LOG:%LOG-BACKUP%\log-backup.txt
+
 start %LOG-BACKUP%\log-backup.txt
 
 cls
@@ -211,6 +213,7 @@ cls
 @echo off
 
 robocopy "%ORIGEM%" "%DESTINO%" /E /V /COPYALL /R:3 /W:10 /LOG:%LOG-BACKUP%\log-backup.txt
+
 start %LOG-BACKUP%\log-backup.txt
 
 cls
@@ -219,6 +222,67 @@ cls
 @echo off
 ping -n 10 0 >NUL
 goto:opcao-0
+
+
+
+:opcao-4
+cls
+@echo.
+@echo +---- Opcao 4 - Backup somente de fotos ----+
+@echo.
+@echo.
+@echo off
+ping -n 2 0 >NUL
+set /p qual_usr="Defina se deseja para o usuario atual ou todos usuarios(A=Usuario atual / T=Todos usuarios): "
+
+if "%qual_usr%" equ "a" (goto:usr_atual)
+if "%qual_usr%" equ "A" (goto:usr_atual)
+if "%qual_usr%" equ "t" (goto:usr_todos)
+if "%qual_usr%" equ "T" (goto:usr_todos)
+if "%qual_usr%" equ "0" (goto:MENU)
+
+:usr_atual
+cls
+@echo.
+@echo [ATENCAO] - Sera feito backup de todas as fotos da pasta do usuario "%username%"
+set /p continuar=Deseja continuar? (s/n)
+
+if "%continuar%" equ "n" (goto:MENU)
+if "%continuar%" equ "N" (goto:MENU)
+
+@echo.
+@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo.
+ping -n 4 0 >NUL
+
+@echo off
+REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%DESTINO%" (
+    @echo.
+    @echo [INFO] - Pasta existe!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %DESTINO%
+)
+
+cls
+@echo.
+@echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
+
+@echo off
+
+for %%x in (jpg, jfif, gif, bmp, png, psd, tiff, exif, raw, webp, svg, avif) 
+do (
+    xcopy %userprofile%\*%%x %DESTINO% /s /c /y >> log-backup.txt
+    @echo. >> log-backup.txt
+)
+
+start %LOG-BACKUP%\log-backup.txt
 
 
 
