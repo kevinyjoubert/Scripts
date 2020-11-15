@@ -65,7 +65,7 @@ cls
 @echo   +  5 - Backup somente de musicas                  +
 @echo   +  6 - Backup somente de videos                   +
 @echo   +  7 - Backup somente de arquivos alterados       +
-@echo   +  8 - Backup de computador remoto                +
+@echo   +  8 - Backup em computador remoto                +
 @echo   +  0 - Sair do script                             +
 @echo   +                                                 +
 @echo   +_________________________________________________+
@@ -727,7 +727,7 @@ goto:opcao-0
 :opcao-8
 cls
 @echo.
-@echo +---- Opcao 8 - Backup de computador remoto ----+
+@echo +---- Opcao 8 - Backup em computador remoto ----+
 @echo.
 @echo.
 ping -n 2 0 >NUL
