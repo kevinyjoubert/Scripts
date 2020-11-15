@@ -662,6 +662,7 @@ ping -n 2 0 >NUL
 @echo.
 ping -n 4 0 >NUL
 @echo [ATENCAO] - Esta opcao foi desenvolvida para atualizar o backup de arquivos que ja foram feito o backup, porem houve alteracao de alguns arquivos ou falha nas opcoes de backups completos, não utilizar para outra finalidade!!
+@echo.
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
@@ -678,15 +679,19 @@ if "%qual_usr%" equ "t" (goto:usr_todos)
 if "%qual_usr%" equ "T" (goto:usr_todos)
 if "%qual_usr%" equ "0" (goto:MENU)
 
+
+@REM condicional da opcao 7 para o usuario atual
 :usr_atual
 cls
 @echo.
 @echo [ATENCAO] - Sera feito backup de todas os arquivos da pasta do usuario "%username%"
+@echo.
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
 if "%continuar%" equ "N" (goto:MENU)
 
+cls
 @echo.
 @echo Verificando se a pasta do Destino existe, se não a mesma será criada
 @echo.
@@ -707,6 +712,8 @@ IF EXIST "%DESTINO%" (
     mkdir %DESTINO%
 )
 
+ping -n 3 0 >NUL
+
 cls
 @echo.
 @echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
@@ -722,17 +729,21 @@ cls
 @echo Backup finalizado, janela sera encerrada em breve!
 @echo off
 ping -n 10 0 >NUL
-goto:opcao-0
+exit
 
+
+@REM condicional da opcao 7 para todos usuarios
 :usr_todos
 cls
 @echo.
 @echo [ATENCAO] - Sera feito backup de todos os arquivos da pasta "%ORIGEM%", onde econtra-se todos os usuarios
+@echo.
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
 if "%continuar%" equ "N" (goto:MENU)
 
+cls
 @echo.
 @echo Verificando se a pasta do Destino existe, se não a mesma será criada
 @echo.
@@ -770,7 +781,9 @@ cls
 @echo Backup finalizado, janela sera encerrada em breve!
 @echo off
 ping -n 10 0 >NUL
-goto:opcao-0
+exit
+
+
 
 
 @REM opcao 8
