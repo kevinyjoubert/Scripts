@@ -75,7 +75,7 @@ cls
 @echo.
 
 @echo off
-@REM condicional para opcoes
+@REM condicional para opcoes do MENU
 set /p opcao="Digite o numero da opcao: "
 
 if "%opcao%" equ "1" (goto:opcao-1)
@@ -91,6 +91,7 @@ if "%opcao%" equ "0" (goto:opcao-0)
 
 @REM opcoes dos backups
 
+@REM opcao 1
 :opcao-1
 cls
 @echo +---- Opcao 1 - Definir pasta do backup ----+
@@ -122,7 +123,7 @@ if "%opcao-1-1%" equ "M" (goto:MENU)
 if "%opcao-1-1%" equ "0" (goto:opcao-0)
 
 
-
+@REM opcao 2
 :opcao-2
 cls
 @echo.
@@ -178,7 +179,7 @@ ping -n 10 0 >NUL
 goto:opcao-0
 
 
-
+@REM opcao 3
 :opcao-3
 cls
 @echo.
@@ -230,7 +231,7 @@ ping -n 10 0 >NUL
 goto:opcao-0
 
 
-
+@REM opcao 4
 :opcao-4
 cls
 @echo.
@@ -353,7 +354,7 @@ ping -n 10 0 >NUL
 goto:opcao-0
 
 
-
+@REM opcao 5
 :opcao-5
 cls
 @echo.
@@ -476,7 +477,7 @@ ping -n 10 0 >NUL
 goto:opcao-0
 
 
-
+@REM opcao 6
 :opcao-6
 cls
 @echo.
@@ -599,7 +600,7 @@ ping -n 10 0 >NUL
 goto:opcao-0
 
 
-
+@REM opcao 7
 :opcao-7
 cls
 @echo.
@@ -723,7 +724,7 @@ ping -n 10 0 >NUL
 goto:opcao-0
 
 
-
+@REM opcao 8
 :opcao-8
 cls
 @echo.
@@ -827,5 +828,7 @@ cls
 ping -n 10 0 >NUL
 exit
 
+
+@REM opcao 0
 :opcao-0
 exit
