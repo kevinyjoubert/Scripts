@@ -532,6 +532,8 @@ if "%qual_usr%" equ "t" (goto:usr_todos)
 if "%qual_usr%" equ "T" (goto:usr_todos)
 if "%qual_usr%" equ "0" (goto:MENU)
 
+
+@REM condicional da opcao 6 para o usuario atual
 :usr_atual
 cls
 @echo.
@@ -541,6 +543,7 @@ set /p continuar=Deseja continuar? (s/n)
 if "%continuar%" equ "n" (goto:MENU)
 if "%continuar%" equ "N" (goto:MENU)
 
+cls
 @echo.
 @echo Verificando se a pasta do Destino existe, se não a mesma será criada!
 @echo.
@@ -560,6 +563,8 @@ IF EXIST "%DESTINO%" (
     @echo off
     mkdir %DESTINO%
 )
+
+ping -n 3 0 >NUL
 
 cls
 @echo.
@@ -582,9 +587,10 @@ cls
 @echo Backup finalizado, janela sera encerrada em breve!
 @echo off
 ping -n 10 0 >NUL
-goto:opcao-0
+exit
 
 
+@REM condicional da opcao 6 para todos usuarios
 :usr_todos
 cls
 @echo.
@@ -594,6 +600,7 @@ set /p continuar=Deseja continuar? (s/n)
 if "%continuar%" equ "n" (goto:MENU)
 if "%continuar%" equ "N" (goto:MENU)
 
+cls
 @echo.
 @echo Verificando se a pasta do Destino existe, se não a mesma será criada!
 @echo.
@@ -613,6 +620,8 @@ IF EXIST "%DESTINO%" (
     @echo off
     mkdir %DESTINO%
 )
+
+ping -n 3 0 >NUL
 
 cls
 @echo.
@@ -635,7 +644,9 @@ cls
 @echo Backup finalizado, janela sera encerrada em breve!
 @echo off
 ping -n 10 0 >NUL
-goto:opcao-0
+exit
+
+
 
 
 @REM opcao 7
