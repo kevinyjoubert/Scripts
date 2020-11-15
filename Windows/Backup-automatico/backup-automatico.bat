@@ -703,6 +703,8 @@ IF EXIST "%DESTINO%" (
     mkdir %DESTINO%
 )
 
+ping -n 3 0 >NUL
+
 cls
 @echo.
 @echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
@@ -772,11 +774,35 @@ cls
 @echo Obs.: Caso coloque uma pasta que nao existe, ela sera criada automaticamente
 @echo.
 set /p DESTINO-PC-REMOTO="Digite o endereco completo da pasta Destino: "
+
+cls
+@echo.
+@echo Verificando se a pasta do Destino (DESTINO-PC-REMOTO) existe, se nao a mesma sera criada
+@echo.
+ping -n 4 0 >NUL
+
+@echo off
+@REM condicional para verificar se a pasta existe, se nao cria a mesma
+IF EXIST "%DESTINO-PC-REMOTO%" (
+    @echo.
+    @echo [INFO] - Pasta existe!
+    @echo.
+) ELSE (
+    @echo.
+    @echo [INFO] - Pasta nao existe e sera criada!
+    @echo.
+
+    @echo off
+    mkdir %DESTINO%
+)
+
+ping -n 3 0 >NUL
 cls
 
 (goto:opcao-8-1)
 
 :opcao-8-2
+cls
 
 
 
