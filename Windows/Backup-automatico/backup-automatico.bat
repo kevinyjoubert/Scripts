@@ -795,6 +795,8 @@ cls
 @echo.
 ping -n 2 0 >NUL
 
+
+@REM ponto de retorno para codicionais de mudar de pasta Origem/Destino
 :opcao-8-1
 @echo Confirme se as pastas estao corretas:
 @echo.
@@ -818,7 +820,10 @@ if "%mudar_pasta%" equ "o" (goto:origem_rede)
 if "%mudar_pasta%" equ "O" (goto:origem_rede)
 if "%mudar_pasta%" equ "d" (goto:destino_rede)
 if "%mudar_pasta%" equ "D" (goto:destino_rede)
+(goto:MENU)
 
+
+@REM condicional da opcao 8 para alterar pasta de Origem da rede
 :origem_rede
 cls
 @echo.
@@ -829,6 +834,8 @@ cls
 
 (goto:opcao-8-1)
 
+
+@REM condicional da opcao 8 para alterar pasta de Destino da rede
 :destino_rede
 cls
 @echo.
@@ -840,7 +847,7 @@ set /p DESTINO-PC-REMOTO="Digite o endereco completo da pasta Destino: "
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino (DESTINO-PC-REMOTO) existe, se nao a mesma sera criada
+@echo Verificando se a pasta do Destino (%DESTINO-PC-REMOTO%) existe, se nao a mesma sera criada
 @echo.
 ping -n 4 0 >NUL
 
@@ -864,10 +871,13 @@ cls
 
 (goto:opcao-8-1)
 
+
+@REM condicional para continuar apos as validacoes
 :opcao-8-2
 cls
 @echo.
-@echo [ATENCAO] - Sera feito backup de todos os arquivos da pasta "%ORIGEM-PC-REMOTO%", onde econtra-se todos os usuarios
+@echo [ATENCAO] - Sera feito backup de todos os arquivos da pasta (%ORIGEM-PC-REMOTO%), onde econtra-se todos os usuarios
+@echo.
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
