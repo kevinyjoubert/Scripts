@@ -739,7 +739,7 @@ ping -n 2 0 >NUL
 @echo.
 @echo Pasta para onde ira os arquivos do Backup: %DESTINO-PC-REMOTO%
 @echo.
-set /p confirma="Pastas estao corretas?(s/n)"
+set /p confirma="Locais estao corretas?(s/n)"
 
 if "%confirma%" equ "n" (goto:mudar_pasta_rede)
 if "%confirma%" equ "N" (goto:mudar_pasta_rede)
