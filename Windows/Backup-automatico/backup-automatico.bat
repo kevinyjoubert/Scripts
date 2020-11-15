@@ -729,9 +729,54 @@ cls
 @echo.
 @echo.
 ping -n 2 0 >NUL
+
+:opcao-8-1
 @echo Confirme se as pastas estao corretas:
+@echo.
 @echo Pasta do Computador remoto, onde esta os arquivos: %ORIGEM-PC-REMOTO%
+@echo.
 @echo Pasta para onde ira os arquivos do Backup: %DESTINO-PC-REMOTO%
+@echo.
+set /p confirma="Pastas estao corretas?(s/n)"
+
+if "%confirma%" equ "n" (goto:mudar_pasta_rede)
+if "%confirma%" equ "N" (goto:mudar_pasta_rede)
+
+(goto:opcao-8-2)
+
+:mudar_pasta_rede
+cls
+@echo.
+set /p mudar_pasta=Qual pasta esta errada? (O=Origem / D=Destino)
+
+if "%mudar_pasta%" equ "o" (goto:origem_rede)
+if "%mudar_pasta%" equ "O" (goto:origem_rede)
+if "%mudar_pasta%" equ "d" (goto:destino_rede)
+if "%mudar_pasta%" equ "D" (goto:destino_rede)
+
+:origem_rede
+cls
+@echo.
+@echo Siga o padrao a seguir com o caminho desejado: \\IP-DA-MAQUINA\HD-DESEJADO (\\10.20.30.10\C)
+@echo.
+set /p ORIGEM-PC-REMOTO="Digite o endereco completo da pasta Origem: "
+cls
+
+(goto:opcao-8-1)
+
+:destino_rede
+cls
+@echo.
+@echo Siga o padrao a seguir com o caminho desejado: HD-DESEJADO\PASTA-DESEJADA (D:\Backup)
+@echo.
+@echo Obs.: Caso coloque uma pasta que nao existe, ela sera criada automaticamente
+@echo.
+set /p DESTINO-PC-REMOTO="Digite o endereco completo da pasta Destino: "
+cls
+
+(goto:opcao-8-1)
+
+:opcao-8-2
 
 
 
