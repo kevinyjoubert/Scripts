@@ -759,7 +759,7 @@ if "%mudar_pasta%" equ "D" (goto:destino_rede)
 :origem_rede
 cls
 @echo.
-@echo Siga o padrao a seguir com o caminho desejado: \\IP-DA-MAQUINA\HD-DESEJADO (\\10.20.30.10\C)
+@echo Siga o padrao a seguir com o caminho desejado: \\IP-DA-MAQUINA\HD-DESEJADO$\Users (\\10.20.30.10\C$\Users)
 @echo.
 set /p ORIGEM-PC-REMOTO="Digite o endereco completo da pasta Origem: "
 cls
