@@ -116,11 +116,15 @@ IF EXIST "%DESTINO%" (
 
 @echo.
 @echo.
-set /p opcao-1-1="Digite m para voltar ao menu ou 0 para sair do script: "
+cls
+set /p continuar="Caminho: (%DESTINO%), esta correto?(s/n) "
 
-if "%opcao-1-1%" equ "m" (goto:MENU)
-if "%opcao-1-1%" equ "M" (goto:MENU)
-if "%opcao-1-1%" equ "0" (goto:opcao-0)
+if "%continuar%" equ "s" (goto:MENU)
+if "%continuar%" equ "S" (goto:MENU)
+if "%continuar%" equ "n" (goto:opcao-1)
+if "%continuar%" equ "N" (goto:opcao-1)
+
+
 
 
 @REM opcao 2
