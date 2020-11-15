@@ -150,7 +150,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada
 @echo.
 ping -n 4 0 >NUL
 
@@ -207,7 +207,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada!
 @echo.
 ping -n 4 0 >NUL
 
@@ -277,7 +277,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada!
 @echo.
 ping -n 4 0 >NUL
 
@@ -334,7 +334,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada!
 @echo.
 ping -n 4 0 >NUL
 
@@ -404,6 +404,7 @@ if "%qual_usr%" equ "0" (goto:MENU)
 cls
 @echo.
 @echo [ATENCAO] - Sera feito backup de todas as musicas da pasta do usuario "%username%"
+@echo.
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
@@ -411,7 +412,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada!
 @echo.
 ping -n 4 0 >NUL
 
@@ -461,6 +462,7 @@ exit
 cls
 @echo.
 @echo [ATENCAO] - Sera feito backup das musicas de todos os usuarios que estao em "%ORIGEM%"
+@echo.
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
@@ -468,7 +470,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada!
 @echo.
 ping -n 4 0 >NUL
 
@@ -538,6 +540,7 @@ if "%qual_usr%" equ "0" (goto:MENU)
 cls
 @echo.
 @echo [ATENCAO] - Sera feito backup de todas os videos da pasta do usuario "%username%"
+@echo.
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
@@ -545,7 +548,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada!
 @echo.
 ping -n 4 0 >NUL
 
@@ -595,6 +598,7 @@ exit
 cls
 @echo.
 @echo [ATENCAO] - Sera feito backup dos videos de todos os usuarios, que estao em "%ORIGEM%"
+@echo.
 set /p continuar=Deseja continuar? (s/n)
 
 if "%continuar%" equ "n" (goto:MENU)
@@ -602,7 +606,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada!
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada!
 @echo.
 ping -n 4 0 >NUL
 
@@ -693,7 +697,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada
 @echo.
 ping -n 4 0 >NUL
 
@@ -745,7 +749,7 @@ if "%continuar%" equ "N" (goto:MENU)
 
 cls
 @echo.
-@echo Verificando se a pasta do Destino existe, se não a mesma será criada
+@echo Verificando se a pasta do Destino (%DESTINO%) existe, se não a mesma será criada
 @echo.
 ping -n 4 0 >NUL
 
