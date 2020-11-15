@@ -205,6 +205,7 @@ set /p continuar=Deseja continuar? (s/n)
 if "%continuar%" equ "n" (goto:MENU)
 if "%continuar%" equ "N" (goto:MENU)
 
+cls
 @echo.
 @echo Verificando se a pasta do Destino existe, se não a mesma será criada!
 @echo.
@@ -225,6 +226,8 @@ IF EXIST "%DESTINO%" (
     mkdir %DESTINO%
 )
 
+ping -n 3 0 >NUL
+
 cls
 @echo.
 @echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
@@ -240,7 +243,9 @@ cls
 @echo Backup finalizado, janela sera encerrada em breve!
 @echo off
 ping -n 10 0 >NUL
-goto:opcao-0
+exit
+
+
 
 
 @REM opcao 4
@@ -250,7 +255,6 @@ cls
 @echo +---- Opcao 4 - Backup somente de fotos ----+
 @echo.
 @echo.
-@echo off
 ping -n 2 0 >NUL
 set /p qual_usr="Defina se deseja para o usuario atual ou todos usuarios(A=Usuario atual / T=Todos usuarios): "
 
