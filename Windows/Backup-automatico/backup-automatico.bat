@@ -97,6 +97,7 @@ cls
 @echo +---- Opcao 1 - Definir pasta do backup ----+
 @echo.
 
+@echo off
 set /p DESTINO="Digite o caminho completo da pasta de Destino: "
 
 @echo off
@@ -114,15 +115,17 @@ IF EXIST "%DESTINO%" (
     mkdir %DESTINO%
 )
 
-@echo.
-@echo.
+ping -n 3 0 >NUL
 cls
-set /p continuar="Caminho: (%DESTINO%), esta correto?(s/n) "
+
+@echo.
+set /p continuar="Caminho: (%DESTINO%), esta correto? (s/n) "
 
 if "%continuar%" equ "s" (goto:MENU)
 if "%continuar%" equ "S" (goto:MENU)
 if "%continuar%" equ "n" (goto:opcao-1)
 if "%continuar%" equ "N" (goto:opcao-1)
+(goto:MENU)
 
 
 
@@ -140,11 +143,12 @@ ping -n 2 0 >NUL
 @echo.
 ping -n 4 0 >NUL
 @echo [ATENCAO] - Sera feito backup de todos os arquivos da pasta do usuario "%username%"
-set /p continuar=Deseja continuar? (s/n)
+set /p continuar="Deseja continuar? (s/n)"
 
 if "%continuar%" equ "n" (goto:MENU)
 if "%continuar%" equ "N" (goto:MENU)
 
+cls
 @echo.
 @echo Verificando se a pasta do Destino existe, se não a mesma será criada
 @echo.
@@ -165,7 +169,9 @@ IF EXIST "%DESTINO%" (
     mkdir %DESTINO%
 )
 
+ping -n 2 0 >NUL
 cls
+
 @echo.
 @echo Backup da pasta em andamento, para visualizar o log de backup, acesse a pasta %LOG-BACKUP% e encontre o arquivo com nome de "log-backup.txt"
 
@@ -178,9 +184,11 @@ start %LOG-BACKUP%\log-backup.txt
 cls
 @echo.
 @echo Backup finalizado, janela sera encerrada em breve!
-@echo off
+
 ping -n 10 0 >NUL
-goto:opcao-0
+exit
+
+
 
 
 @REM opcao 3
