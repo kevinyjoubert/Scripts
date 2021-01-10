@@ -1,0 +1,482 @@
+﻿2656> 2020-07-30 21:16:43> Program: Starting Squirrel Updater: --createShortcut Discord.exe --setupIcon C:\Users\kevin\AppData\Local\Discord\app.ico
+2656> 2020-07-30 21:16:43> ApplyReleasesImpl: About to create shortcuts for Discord.exe, rootAppDir C:\Users\kevin\AppData\Local\Discord
+2656> 2020-07-30 21:16:43> ApplyReleasesImpl: Creating shortcut for Discord.exe => C:\Users\kevin\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc.\Discord.lnk
+2656> 2020-07-30 21:16:44> ApplyReleasesImpl: About to save shortcut: C:\Users\kevin\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc.\Discord.lnk (target C:\Users\kevin\AppData\Local\Discord\Update.exe, workingDir C:\Users\kevin\AppData\Local\Discord\app-0.0.306, args --processStart Discord.exe)
+2656> 2020-07-30 21:16:44> ApplyReleasesImpl: Creating shortcut for Discord.exe => C:\Users\kevin\Desktop\Discord.lnk
+2656> 2020-07-30 21:16:44> ApplyReleasesImpl: About to save shortcut: C:\Users\kevin\Desktop\Discord.lnk (target C:\Users\kevin\AppData\Local\Discord\Update.exe, workingDir C:\Users\kevin\AppData\Local\Discord\app-0.0.306, args --processStart Discord.exe)
+2656> 2020-07-30 21:16:44> ApplyReleasesImpl: fixPinnedExecutables: newCurrentFolder: app-0.0.306
+2656> 2020-07-30 21:16:44> ApplyReleasesImpl: fixPinnedExecutables: enumerating path C:\Users\kevin\AppData\Roaming\Microsoft\Windows\Start Menu failed: System.UnauthorizedAccessException: O acesso ao caminho 'C:\Users\kevin\AppData\Roaming\Microsoft\Windows\Start Menu\Programas' foi negado.
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileSystemEnumerableIterator`1.AddSearchableDirsToStack(SearchData localSearchData)
+   em System.IO.FileSystemEnumerableIterator`1.MoveNext()
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   em System.IO.DirectoryInfo.GetFiles(String searchPattern, SearchOption searchOption)
+   em Squirrel.UpdateManager.ApplyReleasesImpl.fixPinnedExecutables(SemanticVersion newCurrentVersion)
+2656> 2020-07-30 21:16:44> ApplyReleasesImpl: Updating shortcut C:\Users\kevin\Desktop\Discord.lnk
+8908> 2020-07-30 21:16:49> Program: Starting Squirrel Updater: --check https://discordapp.com/api/updates/stable
+8908> 2020-07-30 21:16:49> Program: Fetching update information, downloading from https://discordapp.com/api/updates/stable
+8908> 2020-07-30 21:16:49> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+8908> 2020-07-30 21:16:49> CheckForUpdateImpl: Downloading RELEASES file from https://discordapp.com/api/updates/stable
+8908> 2020-07-30 21:16:51> FileDownloader: Downloading url: https://discordapp.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.306&arch=amd64
+8908> 2020-07-30 21:16:52> CheckForUpdateImpl: No updates
+7824> 2020-07-30 21:17:04> Program: Starting Squirrel Updater: --check https://discordapp.com/api/updates/stable
+7824> 2020-07-30 21:17:04> Program: Fetching update information, downloading from https://discordapp.com/api/updates/stable
+7824> 2020-07-30 21:17:04> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+7824> 2020-07-30 21:17:04> CheckForUpdateImpl: Downloading RELEASES file from https://discordapp.com/api/updates/stable
+7824> 2020-07-30 21:17:05> FileDownloader: Downloading url: https://discordapp.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.306&arch=amd64
+7824> 2020-07-30 21:17:05> CheckForUpdateImpl: No updates
+6208> 2020-07-30 21:19:18> Program: Starting Squirrel Updater: --processStart Discord.exe
+6208> 2020-07-30 21:19:18> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.306\Discord.exe': 
+2192> 2020-07-30 21:19:19> Program: Starting Squirrel Updater: --check https://discordapp.com/api/updates/stable
+2192> 2020-07-30 21:19:19> Program: Fetching update information, downloading from https://discordapp.com/api/updates/stable
+2192> 2020-07-30 21:19:20> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+2192> 2020-07-30 21:19:20> CheckForUpdateImpl: Downloading RELEASES file from https://discordapp.com/api/updates/stable
+2192> 2020-07-30 21:19:20> FileDownloader: Downloading url: https://discordapp.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.306&arch=amd64
+2192> 2020-07-30 21:19:20> CheckForUpdateImpl: No updates
+8144> 2020-08-18 18:50:15> Program: Starting Squirrel Updater: --check https://discordapp.com/api/updates/stable
+8144> 2020-08-18 18:50:15> Program: Fetching update information, downloading from https://discordapp.com/api/updates/stable
+8144> 2020-08-18 18:50:15> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+8144> 2020-08-18 18:50:15> CheckForUpdateImpl: Downloading RELEASES file from https://discordapp.com/api/updates/stable
+8144> 2020-08-18 18:50:16> FileDownloader: Downloading url: https://discordapp.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.306&arch=amd64
+8144> 2020-08-18 18:50:16> CheckForUpdateImpl: Remote version 0.0.307 differs from local 0.0.306
+5328> 2020-08-18 18:50:16> Program: Starting Squirrel Updater: --update https://discordapp.com/api/updates/stable
+5328> 2020-08-18 18:50:16> Program: Starting update, downloading from https://discordapp.com/api/updates/stable
+5328> 2020-08-18 18:50:16> Program: About to update to: C:\Users\kevin\AppData\Local\Discord
+5328> 2020-08-18 18:50:17> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+5328> 2020-08-18 18:50:17> CheckForUpdateImpl: Downloading RELEASES file from https://discordapp.com/api/updates/stable
+5328> 2020-08-18 18:50:17> FileDownloader: Downloading url: https://discordapp.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.306&arch=amd64
+5328> 2020-08-18 18:50:17> CheckForUpdateImpl: Remote version 0.0.307 differs from local 0.0.306
+5328> 2020-08-18 18:50:17> DownloadReleasesImpl: Downloading update from https://discordapp.com/api/updates/stable
+5328> 2020-08-18 18:50:17> FileDownloader: Downloading file: http://dl.discordapp.net/apps/win/Discord-0.0.307-full.nupkg
+5328> 2020-08-18 18:50:21> ApplyReleasesImpl: Writing files to app directory: C:\Users\kevin\AppData\Local\Discord\app-0.0.307
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\d3dcompiler_47.dll to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\d3dcompiler_47.dll
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\chrome_200_percent.pak to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\chrome_200_percent.pak
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\app.ico to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\app.ico
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\chrome_100_percent.pak to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\chrome_100_percent.pak
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\Discord.exe to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\Discord.exe
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\ffmpeg.dll to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\ffmpeg.dll
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\icudtl.dat to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\icudtl.dat
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\libEGL.dll to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\libEGL.dll
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\natives_blob.bin to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\natives_blob.bin
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\libGLESv2.dll to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\libGLESv2.dll
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\resources.pak to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\resources.pak
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\snapshot_blob.bin to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\snapshot_blob.bin
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\v8_context_snapshot.bin to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\v8_context_snapshot.bin
+5328> 2020-08-18 18:50:25> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.307\lib\net45\Squirrel.exe to C:\Users\kevin\AppData\Local\Discord\app-0.0.307\Squirrel.exe
+5328> 2020-08-18 18:50:29> ApplyReleasesImpl: Started updateSelf pid 7608
+5328> 2020-08-18 18:50:34> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\kevin\AppData\Local\Discord\app-0.0.307\Discord.exe]
+5328> 2020-08-18 18:50:35> Utility: Process Started: C:\Users\kevin\AppData\Local\Discord\app-0.0.307\Discord.exe --squirrel-updated 0.0.307, pid 11628
+5328> 2020-08-18 18:50:37> Utility: Received exitcode 0 from process C:\Users\kevin\AppData\Local\Discord\app-0.0.307\Discord.exe
+5328> 2020-08-18 18:50:37> ApplyReleasesImpl: Starting fixPinnedExecutables
+5328> 2020-08-18 18:50:37> ApplyReleasesImpl: fixPinnedExecutables: newCurrentFolder: app-0.0.307
+5328> 2020-08-18 18:50:37> ApplyReleasesImpl: fixPinnedExecutables: enumerating path C:\Users\kevin\AppData\Roaming\Microsoft\Windows\Start Menu failed: System.UnauthorizedAccessException: O acesso ao caminho 'C:\Users\kevin\AppData\Roaming\Microsoft\Windows\Start Menu\Programas' foi negado.
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileSystemEnumerableIterator`1.AddSearchableDirsToStack(SearchData localSearchData)
+   em System.IO.FileSystemEnumerableIterator`1.MoveNext()
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   em System.IO.DirectoryInfo.GetFiles(String searchPattern, SearchOption searchOption)
+   em Squirrel.UpdateManager.ApplyReleasesImpl.fixPinnedExecutables(SemanticVersion newCurrentVersion)
+5328> 2020-08-18 18:50:37> ApplyReleasesImpl: Fixing up tray icons
+5328> 2020-08-18 18:50:37> ApplyReleasesImpl: cleanDeadVersions: for version 0.0.307
+5328> 2020-08-18 18:50:37> ApplyReleasesImpl: cleanDeadVersions: exclude original version folder app-0.0.306
+5328> 2020-08-18 18:50:37> ApplyReleasesImpl: cleanDeadVersions: exclude current version folder app-0.0.307
+ion searchOption)
+   em Squirrel.UpdateManager.ApplyReleasesImpl.fixPinnedExecutables(SemanticVersion newCurrentVersion)
+9696> 2020-08-18 18:50:39> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+9696> 2020-08-18 18:50:39> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+9696> 2020-08-18 18:50:39> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9696> 2020-08-18 18:50:39> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+9696> 2020-08-18 18:50:39> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.307&arch=amd64
+9696> 2020-08-18 18:50:39> CheckForUpdateImpl: No updates
+6464> 2020-08-18 18:50:46> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+6464> 2020-08-18 18:50:46> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+6464> 2020-08-18 18:50:46> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+6464> 2020-08-18 18:50:46> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+6464> 2020-08-18 18:50:46> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.307&arch=amd64
+6464> 2020-08-18 18:50:46> CheckForUpdateImpl: No updates
+6728> 2020-10-05 20:09:28> Program: Starting Squirrel Updater: --processStart Discord.exe
+6728> 2020-10-05 20:09:29> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.307\Discord.exe': 
+5284> 2020-10-05 20:09:39> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+5284> 2020-10-05 20:09:39> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+5284> 2020-10-05 20:09:41> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+5284> 2020-10-05 20:09:41> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+5284> 2020-10-05 20:09:44> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.307&arch=amd64
+5284> 2020-10-05 20:09:45> CheckForUpdateImpl: Remote version 0.0.308 differs from local 0.0.307
+5832> 2020-10-05 20:09:45> Program: Starting Squirrel Updater: --update https://discord.com/api/updates/stable
+5832> 2020-10-05 20:09:45> Program: Starting update, downloading from https://discord.com/api/updates/stable
+5832> 2020-10-05 20:09:45> Program: About to update to: C:\Users\kevin\AppData\Local\Discord
+5832> 2020-10-05 20:09:45> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+5832> 2020-10-05 20:09:45> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+5832> 2020-10-05 20:09:45> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.307&arch=amd64
+5832> 2020-10-05 20:09:46> CheckForUpdateImpl: Remote version 0.0.308 differs from local 0.0.307
+5832> 2020-10-05 20:09:46> DownloadReleasesImpl: Downloading update from https://discord.com/api/updates/stable
+5832> 2020-10-05 20:09:46> FileDownloader: Downloading file: http://dl.discordapp.net/apps/win/Discord-0.0.308-full.nupkg
+5832> 2020-10-05 20:10:22> ApplyReleasesImpl: Writing files to app directory: C:\Users\kevin\AppData\Local\Discord\app-0.0.308
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\app.ico to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\app.ico
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\chrome_100_percent.pak to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\chrome_100_percent.pak
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\chrome_200_percent.pak to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\chrome_200_percent.pak
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\d3dcompiler_47.dll to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\d3dcompiler_47.dll
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\Discord.exe to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\ffmpeg.dll to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\ffmpeg.dll
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\icudtl.dat to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\icudtl.dat
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\libEGL.dll to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\libEGL.dll
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\libGLESv2.dll to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\libGLESv2.dll
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\resources.pak to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\resources.pak
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\natives_blob.bin to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\natives_blob.bin
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\snapshot_blob.bin to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\snapshot_blob.bin
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\v8_context_snapshot.bin to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\v8_context_snapshot.bin
+5832> 2020-10-05 20:10:27> ApplyReleasesImpl: Moving file C:\Users\kevin\AppData\Local\Discord\app-0.0.308\lib\net45\Squirrel.exe to C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Squirrel.exe
+5832> 2020-10-05 20:10:32> ApplyReleasesImpl: Started updateSelf pid 6852
+5832> 2020-10-05 20:10:40> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe]
+5832> 2020-10-05 20:10:42> Utility: Process Started: C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe --squirrel-updated 0.0.308, pid 4772
+5832> 2020-10-05 20:10:53> Utility: Received exitcode 0 from process C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe
+5832> 2020-10-05 20:10:53> ApplyReleasesImpl: Starting fixPinnedExecutables
+5832> 2020-10-05 20:10:53> ApplyReleasesImpl: fixPinnedExecutables: newCurrentFolder: app-0.0.308
+5832> 2020-10-05 20:10:53> ApplyReleasesImpl: fixPinnedExecutables: enumerating path C:\Users\kevin\AppData\Roaming\Microsoft\Windows\Start Menu failed: System.UnauthorizedAccessException: O acesso ao caminho 'C:\Users\kevin\AppData\Roaming\Microsoft\Windows\Start Menu\Programas' foi negado.
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileSystemEnumerableIterator`1.AddSearchableDirsToStack(SearchData localSearchData)
+   em System.IO.FileSystemEnumerableIterator`1.MoveNext()
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   em System.IO.DirectoryInfo.GetFiles(String searchPattern, SearchOption searchOption)
+   em Squirrel.UpdateManager.ApplyReleasesImpl.fixPinnedExecutables(SemanticVersion newCurrentVersion)
+5832> 2020-10-05 20:10:53> ApplyReleasesImpl: Fixing up tray icons
+5832> 2020-10-05 20:10:54> ApplyReleasesImpl: cleanDeadVersions: for version 0.0.308
+5832> 2020-10-05 20:10:54> ApplyReleasesImpl: cleanDeadVersions: exclude original version folder app-0.0.307
+5832> 2020-10-05 20:10:54> ApplyReleasesImpl: cleanDeadVersions: exclude current version folder app-0.0.308
+5832> 2020-10-05 20:10:58> Utility: Process Started: C:\Users\kevin\AppData\Local\Discord\app-0.0.306\Discord.exe --squirrel-obsolete 0.0.306, pid 1700
+5832> 2020-10-05 20:11:00> Utility: Received exitcode 0 from process C:\Users\kevin\AppData\Local\Discord\app-0.0.306\Discord.exe
+7724> 2020-10-05 20:11:15> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+7724> 2020-10-05 20:11:15> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+7724> 2020-10-05 20:11:15> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+7724> 2020-10-05 20:11:15> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+7724> 2020-10-05 20:11:15> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+7724> 2020-10-05 20:11:16> CheckForUpdateImpl: No updates
+10568> 2020-10-05 20:11:52> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10568> 2020-10-05 20:11:52> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10568> 2020-10-05 20:11:52> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10568> 2020-10-05 20:11:52> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10568> 2020-10-05 20:11:52> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10568> 2020-10-05 20:11:52> CheckForUpdateImpl: No updates
+9064> 2020-10-05 21:11:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+9064> 2020-10-05 21:11:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+9064> 2020-10-05 21:11:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9064> 2020-10-05 21:11:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+9064> 2020-10-05 21:11:58> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+9064> 2020-10-05 21:11:59> CheckForUpdateImpl: No updates
+10908> 2020-10-05 22:11:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10908> 2020-10-05 22:11:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10908> 2020-10-05 22:11:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10908> 2020-10-05 22:11:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10908> 2020-10-05 22:11:58> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10908> 2020-10-05 22:11:58> CheckForUpdateImpl: No updates
+10736> 2020-10-05 23:11:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10736> 2020-10-05 23:11:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10736> 2020-10-05 23:11:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10736> 2020-10-05 23:11:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10736> 2020-10-05 23:11:58> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10736> 2020-10-05 23:11:58> CheckForUpdateImpl: No updates
+680> 2020-10-06 19:12:34> Program: Starting Squirrel Updater: --processStart Discord.exe
+680> 2020-10-06 19:12:35> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+8348> 2020-10-06 19:13:44> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+8348> 2020-10-06 19:13:44> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+8348> 2020-10-06 19:13:44> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+8348> 2020-10-06 19:13:44> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+8348> 2020-10-06 19:13:44> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+8348> 2020-10-06 19:13:45> CheckForUpdateImpl: No updates
+2424> 2020-10-06 19:14:04> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+2424> 2020-10-06 19:14:04> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+2424> 2020-10-06 19:14:04> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+2424> 2020-10-06 19:14:04> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+2424> 2020-10-06 19:14:04> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+2424> 2020-10-06 19:14:04> CheckForUpdateImpl: No updates
+10872> 2020-10-06 20:14:49> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10872> 2020-10-06 20:14:49> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10872> 2020-10-06 20:14:49> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10872> 2020-10-06 20:14:49> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10872> 2020-10-06 20:14:49> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10872> 2020-10-06 20:14:49> CheckForUpdateImpl: No updates
+9436> 2020-10-06 21:14:49> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+9436> 2020-10-06 21:14:49> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+9436> 2020-10-06 21:14:49> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9436> 2020-10-06 21:14:49> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+9436> 2020-10-06 21:14:49> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+9436> 2020-10-06 21:14:49> CheckForUpdateImpl: No updates
+5932> 2020-10-06 22:14:49> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+5932> 2020-10-06 22:14:49> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+5932> 2020-10-06 22:14:49> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+5932> 2020-10-06 22:14:49> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+5932> 2020-10-06 22:14:49> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+5932> 2020-10-06 22:14:49> CheckForUpdateImpl: No updates
+8292> 2020-10-07 18:09:29> Program: Starting Squirrel Updater: --processStart Discord.exe
+8292> 2020-10-07 18:09:29> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+9824> 2020-10-07 18:11:38> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+9824> 2020-10-07 18:11:38> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+9824> 2020-10-07 18:11:38> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9824> 2020-10-07 18:11:38> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+9824> 2020-10-07 18:11:38> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+9824> 2020-10-07 18:11:39> CheckForUpdateImpl: No updates
+9008> 2020-10-07 18:11:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+9008> 2020-10-07 18:11:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+9008> 2020-10-07 18:11:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9008> 2020-10-07 18:11:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+9008> 2020-10-07 18:11:58> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+9008> 2020-10-07 18:11:58> CheckForUpdateImpl: No updates
+12812> 2020-10-07 19:12:39> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+12812> 2020-10-07 19:12:39> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+12812> 2020-10-07 19:12:39> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+12812> 2020-10-07 19:12:39> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+12812> 2020-10-07 19:12:39> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+12812> 2020-10-07 19:12:39> CheckForUpdateImpl: No updates
+12912> 2020-10-07 20:12:39> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+12912> 2020-10-07 20:12:39> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+12912> 2020-10-07 20:12:39> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+12912> 2020-10-07 20:12:39> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+12912> 2020-10-07 20:12:39> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+12912> 2020-10-07 20:12:39> CheckForUpdateImpl: No updates
+10196> 2020-10-07 21:12:39> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10196> 2020-10-07 21:12:39> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10196> 2020-10-07 21:12:39> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10196> 2020-10-07 21:12:39> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10196> 2020-10-07 21:12:39> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10196> 2020-10-07 21:12:39> CheckForUpdateImpl: No updates
+1048> 2020-10-07 22:12:39> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+1048> 2020-10-07 22:12:39> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+1048> 2020-10-07 22:12:39> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+1048> 2020-10-07 22:12:39> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+1048> 2020-10-07 22:12:39> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+1048> 2020-10-07 22:12:39> CheckForUpdateImpl: No updates
+10432> 2020-10-08 22:46:15> Program: Starting Squirrel Updater: --processStart Discord.exe
+10432> 2020-10-08 22:46:15> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+7004> 2020-10-08 22:46:29> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+7004> 2020-10-08 22:46:29> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+7004> 2020-10-08 22:46:29> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+7004> 2020-10-08 22:46:29> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+7004> 2020-10-08 22:46:30> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+7004> 2020-10-08 22:46:30> CheckForUpdateImpl: No updates
+8620> 2020-10-08 23:46:42> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+8620> 2020-10-08 23:46:42> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+8620> 2020-10-08 23:46:42> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+8620> 2020-10-08 23:46:42> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+8620> 2020-10-08 23:46:42> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+8620> 2020-10-08 23:46:42> CheckForUpdateImpl: No updates
+6344> 2020-10-09 00:46:42> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+6344> 2020-10-09 00:46:42> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+6344> 2020-10-09 00:46:42> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+6344> 2020-10-09 00:46:42> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+6344> 2020-10-09 00:46:42> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+6344> 2020-10-09 00:46:42> CheckForUpdateImpl: No updates
+6124> 2020-10-09 19:27:17> Program: Starting Squirrel Updater: --processStart Discord.exe
+6124> 2020-10-09 19:27:17> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+6200> 2020-10-09 19:27:37> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+6200> 2020-10-09 19:27:37> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+6200> 2020-10-09 19:27:37> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+6200> 2020-10-09 19:27:37> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+6200> 2020-10-09 19:27:38> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+6200> 2020-10-09 19:27:38> CheckForUpdateImpl: No updates
+10660> 2020-10-09 20:27:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10660> 2020-10-09 20:27:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10660> 2020-10-09 20:27:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10660> 2020-10-09 20:27:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10660> 2020-10-09 20:27:58> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10660> 2020-10-09 20:27:59> CheckForUpdateImpl: No updates
+10960> 2020-10-09 21:27:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10960> 2020-10-09 21:27:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10960> 2020-10-09 21:27:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10960> 2020-10-09 21:27:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10960> 2020-10-09 21:27:58> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10960> 2020-10-09 21:27:59> CheckForUpdateImpl: No updates
+5948> 2020-10-09 22:27:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+5948> 2020-10-09 22:27:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+5948> 2020-10-09 22:27:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+5948> 2020-10-09 22:27:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+5948> 2020-10-09 22:27:58> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+5948> 2020-10-09 22:27:59> CheckForUpdateImpl: No updates
+13140> 2020-10-09 23:27:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+13140> 2020-10-09 23:27:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+13140> 2020-10-09 23:27:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+13140> 2020-10-09 23:27:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+13140> 2020-10-09 23:27:58> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+13140> 2020-10-09 23:27:59> CheckForUpdateImpl: No updates
+11240> 2020-10-10 00:01:31> Program: Starting Squirrel Updater: --processStart Discord.exe
+11240> 2020-10-10 00:01:31> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+7940> 2020-10-10 00:01:32> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+7940> 2020-10-10 00:01:32> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+7940> 2020-10-10 00:01:32> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+7940> 2020-10-10 00:01:32> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+7940> 2020-10-10 00:01:32> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+7940> 2020-10-10 00:01:32> CheckForUpdateImpl: No updates
+10580> 2020-10-10 17:56:57> Program: Starting Squirrel Updater: --processStart Discord.exe
+10580> 2020-10-10 17:56:57> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+10488> 2020-10-10 17:56:58> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10488> 2020-10-10 17:56:58> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10488> 2020-10-10 17:56:58> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10488> 2020-10-10 17:56:58> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10488> 2020-10-10 17:56:59> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10488> 2020-10-10 17:56:59> CheckForUpdateImpl: No updates
+6168> 2020-10-10 18:57:05> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+6168> 2020-10-10 18:57:05> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+6168> 2020-10-10 18:57:05> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+6168> 2020-10-10 18:57:05> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+6168> 2020-10-10 18:57:05> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+6168> 2020-10-10 18:57:05> CheckForUpdateImpl: No updates
+7804> 2020-10-10 19:57:05> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+7804> 2020-10-10 19:57:05> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+7804> 2020-10-10 19:57:05> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+7804> 2020-10-10 19:57:05> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+7804> 2020-10-10 19:57:05> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+7804> 2020-10-10 19:57:05> CheckForUpdateImpl: No updates
+5928> 2020-10-10 20:57:05> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+5928> 2020-10-10 20:57:05> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+5928> 2020-10-10 20:57:05> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+5928> 2020-10-10 20:57:05> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+5928> 2020-10-10 20:57:05> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+5928> 2020-10-10 20:57:05> CheckForUpdateImpl: No updates
+10976> 2020-10-10 21:57:05> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10976> 2020-10-10 21:57:05> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10976> 2020-10-10 21:57:05> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10976> 2020-10-10 21:57:05> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10976> 2020-10-10 21:57:05> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10976> 2020-10-10 21:57:05> CheckForUpdateImpl: No updates
+5348> 2020-10-10 23:00:45> Program: Starting Squirrel Updater: --processStart Discord.exe
+5348> 2020-10-10 23:00:45> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+8268> 2020-10-10 23:01:23> Program: Starting Squirrel Updater: --processStart Discord.exe
+8268> 2020-10-10 23:01:23> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+9032> 2020-10-10 23:01:34> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+9032> 2020-10-10 23:01:34> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+9032> 2020-10-10 23:01:34> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9032> 2020-10-10 23:01:34> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+9032> 2020-10-10 23:01:34> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+9032> 2020-10-10 23:01:35> CheckForUpdateImpl: No updates
+7520> 2020-10-11 00:01:54> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+7520> 2020-10-11 00:01:54> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+7520> 2020-10-11 00:01:54> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+7520> 2020-10-11 00:01:54> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+7520> 2020-10-11 00:01:54> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+7520> 2020-10-11 00:01:54> CheckForUpdateImpl: No updates
+2452> 2020-10-11 01:01:54> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+2452> 2020-10-11 01:01:54> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+2452> 2020-10-11 01:01:54> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+2452> 2020-10-11 01:01:54> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+2452> 2020-10-11 01:01:54> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+2452> 2020-10-11 01:01:54> CheckForUpdateImpl: No updates
+6920> 2020-10-11 18:33:31> Program: Starting Squirrel Updater: --processStart Discord.exe
+6920> 2020-10-11 18:33:31> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+9432> 2020-10-11 18:34:02> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+9432> 2020-10-11 18:34:02> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+9432> 2020-10-11 18:34:02> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9432> 2020-10-11 18:34:02> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+9432> 2020-10-11 18:34:02> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+9432> 2020-10-11 18:34:03> CheckForUpdateImpl: No updates
+6836> 2020-10-11 19:34:26> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+6836> 2020-10-11 19:34:26> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+6836> 2020-10-11 19:34:26> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+6836> 2020-10-11 19:34:26> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+6836> 2020-10-11 19:34:26> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+6836> 2020-10-11 19:34:26> CheckForUpdateImpl: No updates
+5696> 2020-10-11 20:34:26> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+5696> 2020-10-11 20:34:26> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+5696> 2020-10-11 20:34:26> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+5696> 2020-10-11 20:34:26> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+5696> 2020-10-11 20:34:26> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+5696> 2020-10-11 20:34:27> CheckForUpdateImpl: No updates
+6604> 2020-10-11 21:34:26> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+6604> 2020-10-11 21:34:26> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+6604> 2020-10-11 21:34:26> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+6604> 2020-10-11 21:34:26> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+6604> 2020-10-11 21:34:26> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+6604> 2020-10-11 21:34:27> CheckForUpdateImpl: No updates
+2688> 2020-10-12 17:09:26> Program: Starting Squirrel Updater: --processStart Discord.exe
+2688> 2020-10-12 17:09:26> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+6176> 2020-10-12 17:10:06> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+6176> 2020-10-12 17:10:06> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+6176> 2020-10-12 17:10:06> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+6176> 2020-10-12 17:10:06> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+6176> 2020-10-12 17:10:06> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+6176> 2020-10-12 17:10:07> CheckForUpdateImpl: No updates
+2336> 2020-10-12 17:10:23> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+2336> 2020-10-12 17:10:23> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+2336> 2020-10-12 17:10:23> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+2336> 2020-10-12 17:10:24> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+2336> 2020-10-12 17:10:24> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+2336> 2020-10-12 17:10:24> CheckForUpdateImpl: No updates
+1624> 2020-10-12 18:10:36> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+1624> 2020-10-12 18:10:36> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+1624> 2020-10-12 18:10:36> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+1624> 2020-10-12 18:10:36> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+1624> 2020-10-12 18:10:36> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+1624> 2020-10-12 18:10:37> CheckForUpdateImpl: No updates
+8940> 2020-10-12 19:10:36> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+8940> 2020-10-12 19:10:36> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+8940> 2020-10-12 19:10:36> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+8940> 2020-10-12 19:10:36> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+8940> 2020-10-12 19:10:37> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+8940> 2020-10-12 19:10:37> CheckForUpdateImpl: No updates
+2768> 2020-10-12 20:10:36> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+2768> 2020-10-12 20:10:36> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+2768> 2020-10-12 20:10:36> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+2768> 2020-10-12 20:10:37> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+2768> 2020-10-12 20:10:37> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+2768> 2020-10-12 20:10:37> CheckForUpdateImpl: No updates
+4520> 2020-10-12 21:10:36> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+4520> 2020-10-12 21:10:36> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+4520> 2020-10-12 21:10:37> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+4520> 2020-10-12 21:10:37> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+4520> 2020-10-12 21:10:37> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+4520> 2020-10-12 21:10:37> CheckForUpdateImpl: No updates
+10380> 2020-10-12 22:10:36> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10380> 2020-10-12 22:10:36> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10380> 2020-10-12 22:10:36> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10380> 2020-10-12 22:10:36> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10380> 2020-10-12 22:10:37> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10380> 2020-10-12 22:10:37> CheckForUpdateImpl: No updates
+10864> 2020-10-12 23:10:36> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10864> 2020-10-12 23:10:36> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10864> 2020-10-12 23:10:36> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10864> 2020-10-12 23:10:36> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10864> 2020-10-12 23:10:37> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10864> 2020-10-12 23:10:37> CheckForUpdateImpl: No updates
+10836> 2020-10-13 00:10:36> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+10836> 2020-10-13 00:10:36> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+10836> 2020-10-13 00:10:36> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10836> 2020-10-13 00:10:36> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+10836> 2020-10-13 00:10:36> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+10836> 2020-10-13 00:10:37> CheckForUpdateImpl: No updates
+7540> 2020-10-16 00:55:51> Program: Starting Squirrel Updater: --processStart Discord.exe
+7540> 2020-10-16 00:55:51> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+8600> 2020-10-16 00:56:34> Program: Starting Squirrel Updater: --processStart Discord.exe
+8600> 2020-10-16 00:56:34> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+3748> 2020-10-16 00:57:00> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+3748> 2020-10-16 00:57:01> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+3748> 2020-10-16 00:57:01> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+3748> 2020-10-16 00:57:01> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+3748> 2020-10-16 00:57:01> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+3748> 2020-10-16 00:57:01> CheckForUpdateImpl: No updates
+1372> 2020-10-16 00:57:21> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+1372> 2020-10-16 00:57:21> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+1372> 2020-10-16 00:57:21> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+1372> 2020-10-16 00:57:21> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+1372> 2020-10-16 00:57:21> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+1372> 2020-10-16 00:57:22> CheckForUpdateImpl: No updates
+1796> 2020-10-18 00:24:33> Program: Starting Squirrel Updater: --processStart Discord.exe
+1796> 2020-10-18 00:24:34> Program: About to launch: 'C:\Users\kevin\AppData\Local\Discord\app-0.0.308\Discord.exe': 
+8868> 2020-10-18 00:24:56> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+8868> 2020-10-18 00:24:57> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+8868> 2020-10-18 00:24:57> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+8868> 2020-10-18 00:24:57> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+8868> 2020-10-18 00:25:00> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+8868> 2020-10-18 00:25:01> CheckForUpdateImpl: No updates
+9836> 2020-10-17 22:25:37> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+9836> 2020-10-17 22:25:37> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+9836> 2020-10-17 22:25:37> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9836> 2020-10-17 22:25:37> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+9836> 2020-10-17 22:25:38> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+9836> 2020-10-17 22:25:38> CheckForUpdateImpl: No updates
+8824> 2020-10-17 23:25:37> Program: Starting Squirrel Updater: --check https://discord.com/api/updates/stable
+8824> 2020-10-17 23:25:37> Program: Fetching update information, downloading from https://discord.com/api/updates/stable
+8824> 2020-10-17 23:25:37> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+8824> 2020-10-17 23:25:37> CheckForUpdateImpl: Downloading RELEASES file from https://discord.com/api/updates/stable
+8824> 2020-10-17 23:25:37> FileDownloader: Downloading url: https://discord.com/api/updates/stable/RELEASES?id=Discord&localVersion=0.0.308&arch=amd64
+8824> 2020-10-17 23:25:37> CheckForUpdateImpl: No updates

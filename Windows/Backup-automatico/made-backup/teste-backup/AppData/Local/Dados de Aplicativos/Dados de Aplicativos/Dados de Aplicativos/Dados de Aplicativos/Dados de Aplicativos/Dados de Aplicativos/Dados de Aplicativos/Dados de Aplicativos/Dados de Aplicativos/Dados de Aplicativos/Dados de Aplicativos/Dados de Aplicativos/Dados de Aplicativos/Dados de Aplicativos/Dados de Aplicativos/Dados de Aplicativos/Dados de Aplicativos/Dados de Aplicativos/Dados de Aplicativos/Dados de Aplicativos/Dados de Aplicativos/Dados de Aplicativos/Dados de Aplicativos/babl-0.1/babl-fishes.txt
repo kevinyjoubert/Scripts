@@ -1,0 +1,253 @@
+#BABL_0_1_76-5-g24c3666 BABL_PATH_LENGTH=2 BABL_TOLERANCE=0,000005
+RGBA float
+R'G'B' u8
+	pixels=0 cost=237 error=0,0000021852
+	C:\Program Files\GIMP 2\lib\babl-0.1\avx2-int8.dll 0: RGBA float to R'G'B'A u8
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl.dll 0: R'G'B'A u8 to R'G'B' u8
+----
+cairo-ARGB32
+R'G'B'A u8
+	pixels=0 error=0,0000000000 [reference]
+----
+float[1] 
+u8[1] 
+	pixels=0 error=0,0000000000 [reference]
+----
+Y' u8
+Y u16
+	pixels=0 cost=231 error=0,0000001267
+	C:\Program Files\GIMP 2\lib\babl-0.1\avx2-int8.dll 0: Y' u8 to Y float
+	C:\Program Files\GIMP 2\lib\babl-0.1\simple.dll 0: Y float to Y u16
+----
+Y u16
+Y' u8
+	pixels=0 cost=414 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl-table-lies.dll 0: Y u16 to Y float
+	C:\Program Files\GIMP 2\lib\babl-0.1\avx2-int8.dll 0: Y float to Y' u8
+----
+R'G'B' double
+RGB double
+	pixels=0 cost=8579 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\double.dll 0: R'G'B' double to RGB double
+----
+RGB double
+R'G'B' double
+	pixels=0 cost=9075 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\double.dll 0: RGB double to R'G'B' double
+----
+)gimp-indexed-format-4-000000006428b180
+R'G'B' u8
+	pixels=0 cost=95 error=0,0000000000
+	 )gimp-indexed-format-4-000000006428b180 to R'G'B'A u8 0
+	C:\Program Files\GIMP 2\lib\babl-0.1\gegl-fixups.dll 0: R'G'B'A u8 to R'G'B' u8
+----
+)gimp-indexed-format-4-000000006428b180
+R'G'B'A u8
+	pixels=0 cost=53 error=0,0000000000
+	 )gimp-indexed-format-4-000000006428b180 to R'G'B'A u8 0
+----
+R'G'B' double
+CIE Lab double
+	pixels=0 error=0,0000000000 [reference]
+----
+CIE Lab double
+R'G'B' double
+	pixels=0 cost=3828 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\CIE.dll 0: CIE Lab double to RGBA double
+	C:\Program Files\GIMP 2\lib\babl-0.1\double.dll 0: RGBA double to RGB double
+	C:\Program Files\GIMP 2\lib\babl-0.1\double.dll 0: RGB double to R'G'B' double
+----
+R'G'B' u8
+RaGaBaA float
+	pixels=0 cost=64 error=0,0000000964
+	C:\Program Files\GIMP 2\lib\babl-0.1\gegl-fixups.dll 0: R'G'B' u8 to RaGaBaA float
+----
+RGBA float
+R'G'B'A float
+	pixels=0 cost=381 error=0,0000000388
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: RGBA float to R'G'B'A float
+----
+RGBA float
+RaGaBaA float
+	pixels=0 cost=60 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: RGBA float to RaGaBaA float
+----
+RGBA float
+CIE Lab alpha float
+	pixels=0 cost=674 error=0,0000003154
+	C:\Program Files\GIMP 2\lib\babl-0.1\CIE.dll 1: RGBA float to CIE Lab alpha float
+----
+RaGaBaA float
+RGBA float
+	pixels=0 cost=104 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: RaGaBaA float to RGBA float
+----
+RaGaBaA float
+R'G'B'A float
+	pixels=0 cost=435 error=0,0000000389
+	C:\Program Files\GIMP 2\lib\babl-0.1\gegl-fixups.dll 0: RaGaBaA float to RGBA float
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: RGBA float to R'G'B'A float
+----
+R'G'B'A float
+RGBA float
+	pixels=0 cost=403 error=0,0000000596
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: R'G'B'A float to RGBA float
+----
+R'G'B'A float
+CIE Lab alpha float
+	pixels=0 cost=782 error=0,0000003373
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: R'G'B'A float to RGBA float
+	C:\Program Files\GIMP 2\lib\babl-0.1\CIE.dll 1: RGBA float to CIE Lab alpha float
+----
+R'G'B' u8
+RGBA float
+	pixels=0 cost=67 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\gimp-8bit.dll 0: R'G'B' u8 to RGBA float
+----
+CIE Lab alpha float
+RGBA float
+	pixels=0 cost=444 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\CIE.dll 0: CIE Lab alpha float to RGBA float
+----
+CIE Lab alpha float
+R'G'B'A float
+	pixels=0 cost=740 error=0,0000000397
+	C:\Program Files\GIMP 2\lib\babl-0.1\CIE.dll 0: CIE Lab alpha float to RGBA float
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: RGBA float to R'G'B'A float
+----
+R'G'B'A double
+CIE LCH(ab) double
+	pixels=0 cost=15532 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\double.dll 0: R'G'B'A double to RGBA double
+	C:\Program Files\GIMP 2\lib\babl-0.1\CIE.dll 0: RGBA double to CIE LCH(ab) double
+----
+CIE LCH(ab) double
+R'G'B' double
+	pixels=0 cost=6666 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\CIE.dll 0: CIE LCH(ab) double to RGBA double
+	C:\Program Files\GIMP 2\lib\babl-0.1\double.dll 0: RGBA double to R'G'B'A double
+	C:\Program Files\GIMP 2\lib\babl-0.1\double.dll 0: R'G'B'A double to R'G'B' double
+----
+RGB float
+R'G'B'A float
+	pixels=0 cost=386 error=0,0000000388
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: RGB float to R'G'B' float
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl.dll 0: R'G'B' float to R'G'B'A float
+----
+R'G'B' u8
+RGB float
+	pixels=0 cost=82 error=0,0000001073
+	C:\Program Files\GIMP 2\lib\babl-0.1\avx2-int8.dll 0: R'G'B' u8 to RGB float
+----
+R'G'B' u8
+RGBA double
+	pixels=0 cost=156 error=0,0000000964
+	C:\Program Files\GIMP 2\lib\babl-0.1\gegl-fixups.dll 0: R'G'B' u8 to RGBA float
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl-lies.dll 0: RGBA float to RGBA double
+----
+R'G'B'A float
+RGBA double
+	pixels=0 cost=511 error=0,0000000596
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: R'G'B'A float to RGBA float
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl-lies.dll 0: RGBA float to RGBA double
+----
+R'G'B'A u8
+RGBA double
+	pixels=0 cost=168 error=0,0000000024
+	C:\Program Files\GIMP 2\lib\babl-0.1\gimp-8bit.dll 0: R'G'B'A u8 to RGBA float
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl-lies.dll 0: RGBA float to RGBA double
+----
+R'G'B'A double
+RGBA float
+	pixels=0 cost=445 error=0,0000000596
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl.dll 0: R'G'B'A double to R'G'B'A float
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: R'G'B'A float to RGBA float
+----
+Y float
+Y u8
+	pixels=0 cost=11 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-int8.dll 0: Y float to Y u8
+----
+R'G'B'A u8
+cairo-ARGB32
+	pixels=0 cost=88 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\cairo.dll 0: R'G'B'A u8 to cairo-ARGB32
+----
+CIE LCH(ab) double
+R'G'B' u8
+	pixels=0 cost=5160 error=0,0000021852
+	C:\Program Files\GIMP 2\lib\babl-0.1\CIE.dll 0: CIE LCH(ab) double to RGBA double
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl-lies.dll 0: RGBA double to RGBA float
+	C:\Program Files\GIMP 2\lib\babl-0.1\avx2-int8.dll 0: RGBA float to R'G'B'A u8
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl.dll 0: R'G'B'A u8 to R'G'B' u8
+----
+R'G'B'A u8
+R'G'B'A float
+	pixels=0 cost=32 error=0,0000000551
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse4-int8.dll 0: R'G'B'A u8 to R'G'B'A float
+----
+Y' u8
+RaGaBaA float
+	pixels=0 cost=97 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\gimp-8bit.dll 0: Y' u8 to Y float
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl-lies.dll 0: Y float to RaGaBaA float
+----
+Y u8
+RaGaBaA float
+	pixels=0 cost=72 error=0,0000000111
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse4-int8.dll 0: Y u8 to Y float
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl-lies.dll 0: Y float to RaGaBaA float
+----
+R'G'B'A u8
+RaGaBaA float
+	pixels=0 cost=134 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\gimp-8bit.dll 0: R'G'B'A u8 to RGBA float
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-float.dll 0: RGBA float to RaGaBaA float
+----
+R'G'B' u8
+R'G'B'A u8
+	pixels=0 cost=23 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl.dll 0: R'G'B' u8 to R'G'B'A u8
+----
+R'G'B' u8
+R'G'B'A float
+	pixels=0 cost=55 error=0,0000001355
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl.dll 0: R'G'B' u8 to R'G'B'A u8
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse4-int8.dll 0: R'G'B'A u8 to R'G'B'A float
+----
+R'G'B'A float
+R'G'B'A u8
+	pixels=0 cost=47 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-int8.dll 0: R'G'B'A float to R'G'B'A u8
+----
+R'G'B'A float
+R'G'B' u8
+	pixels=0 cost=66 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse2-int8.dll 0: R'G'B'A float to R'G'B'A u8
+	C:\Program Files\GIMP 2\lib\babl-0.1\gegl-fixups.dll 0: R'G'B'A u8 to R'G'B' u8
+----
+R'G'B'A u8
+RGBA float
+	pixels=0 cost=73 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\gimp-8bit.dll 0: R'G'B'A u8 to RGBA float
+----
+R'G'B' u8
+cairo-RGB24
+	pixels=0 cost=59 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\cairo.dll 0: R'G'B' u8 to cairo-RGB24
+----
+RGBA float
+R'G'B'A u8
+	pixels=0 cost=224 error=0,0000021852
+	C:\Program Files\GIMP 2\lib\babl-0.1\avx2-int8.dll 0: RGBA float to R'G'B'A u8
+----
+Y u8
+Y float
+	pixels=0 cost=8 error=0,0000000111
+	C:\Program Files\GIMP 2\lib\babl-0.1\sse4-int8.dll 0: Y u8 to Y float
+----
+Y' u8
+R'G'B' u8
+	pixels=0 cost=44 error=0,0000000000
+	C:\Program Files\GIMP 2\lib\babl-0.1\gggl.dll 0: Y' u8 to R'G'B' u8
+----
