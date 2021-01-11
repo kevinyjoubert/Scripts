@@ -38,16 +38,20 @@ if ! sudo apt dist-upgrade
     fi
 
 sleep 3
-clear
+
 
 ## CONSERTANDO A DATA E HORA
+clear
+
 echo 
 echo "  | -- CONSERTANDO A DATA E HORA DO KALI LINUX -- |"
 echo 
 
 if ! sudo apt install chrony
-then
-    echo -e "${COR_VERMELHA} [ERROR] - Problema ao instalar o chrony, verificar! ${COR_ORIGINAL}"
-exit 1
-fi
+    then
+        echo -e "${COR_VERMELHA} [ERROR] - Problema ao instalar o chrony, verificar! ${COR_ORIGINAL}"
+    else
+        echo -e "${COR_VERDE}[DONE] - chrony instalado! ${COR_ORIGINAL}"
+    exit 1
+    fi
 
