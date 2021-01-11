@@ -1,40 +1,38 @@
 @echo off
 @REM
-@REM pos_instalação_meus_programas_favoritos.sh - Faz a instalação dos programas 
-@REM que costumo utilizar no Linux
+@REM - Nome: backup-automatico.bat
+@REM
+@REM - Objetivo: Realizar backup mais facilmente da pasta do usuário, todos usuários ou de arquivos de extensões isoladas
 @REM
 @REM Github:       https://github.com/kevinyjoubert
 @REM Linkedin:     https://www.linkedin.com/in/keviny-joubert-2992b8b1/
 @REM Autor:        Keviny Joubert
 @REM
-@REM -------------------------------------------------------------------------------
+@REM -----------------------------------------------------------------------------------------
 @REM
-@REM -O QUE O SCRIPT FAZ?
+@REM -O que o Script faz?
 @REM
-@REM   Esse script instala os programas que utilizo após a formatação, faz upgrade
-@REM  e limpeza do sistema. 
-@REM
-@REM
-@REM -COMO USAR?
-@REM
-@REM   Abra o terminal aonde se encontra o arquivo e execute o comando abaixo:
-@REM
-@REM      $  ./pos_instalação_meus_programas_favoritos.sh
+@REM    Esse Script foi feito para realizar backup mais facilmente, dando opções de backup da pasta do usuário, todos usuários, extensões de musicas, fotos, videos e remoto.
 @REM
 @REM
-@REM -NOTA:
+@REM -Como usar?
 @REM
-@REM   O Script foi pensado para ter uma boa organização, fácil manutenção e para
-@REM  quem queira editar ao seu uso!
+@REM    Abra o Script com duplo clique e utilize, caso queira mudar alguma pasta origem ou backup, computador remoto ou log-backup, altere antes de executar o Script.
 @REM
-@REM -------------------------------------------------------------------------------
+@REM
+@REM -Nota:
+@REM
+@REM    O Script foi pensado para facilitar o processo de backup tanto para formatação ou facilidade do usuário
+@REM
+@REM -----------------------------------------------------------------------------------------
 @REM
 @REM -Changelog:
 @REM
-@REM   v1.0 DATA, Keviny Joubert:
-@REM       - Primeira versão com poucos programas
+@REM    v1.0 - 10/01/2021, Keviny Joubert:
+@REM       - Backup usuário, todos usuários, imagens, videos, musica, remoto
 @REM
-@REM -------------------------------------------------------------------------------
+@REM -----------------------------------------------------------------------------------------
+
 
 @REM Para mudar o local de origem do backup e o destino pra onde envia, altere aqui ou no menu
 set ORIGEM=C:\Users
@@ -49,6 +47,8 @@ set LOG-BACKUP=D:\Backup
 
 @REM cor do terminal
 color a
+
+
 
 @REM menu para opcoes de backup
 :MENU
