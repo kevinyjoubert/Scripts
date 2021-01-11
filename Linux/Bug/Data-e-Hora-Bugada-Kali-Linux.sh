@@ -1,11 +1,48 @@
 #!/bin/bash
-
+#
+# - Nome: Data-e-hora-Bugada-Kali-Linux.sh
+#
+# - Objetivo: Ativar a sincronização da data e hora do Kali Linux, pode ser usado em outras distros se forem baseadas no 'Debian'.
+#
+# Github:       https://github.com/kevinyjoubert
+# Linkedin:     https://www.linkedin.com/in/keviny-joubert-2992b8b1/
+# Autor:        Keviny Joubert
+#
+# -----------------------------------------------------------------------------------------
+#
+# - O que o Script faz?
+#
+#       Esse Script foi feito para consertar o bug na data e hora do Kali.
+#
+#
+# - Como usar?
+#
+#       Abra o terminal aonde se encontra o arquivo e execute o comando abaixo:
+#
+#           $ ./Data-e-hora-Bugada-Kali-Linux.sh
+#
+#       [ALERT] - Importante lembrar que para o Script funcionar é preciso estar com a data e hora correta, pelo fato de que o Script primeiro atualiza o sistema e depois efetua a correção do bug.
+#
+#
+# - Nota:
+#
+#       O Script foi pensado para auxiliar na correção desse bug da Data e Hora do Kali Linux.
+#
+# -----------------------------------------------------------------------------------------
+#
+# - ChangeLog:
+#
+#       v1.0 - 10/01/2021, Keviny Joubert:
+#           - Versão atual e final.
+#
+# -----------------------------------------------------------------------------------------
 
 ## CORES DE ALERTAS
 COR_VERMELHA='\e[1;91m'
 COR_AMARELA='\e[1;93m'
 COR_VERDE='\e[1;92m'
 COR_ORIGINAL='\e[0m'
+
 
 ## START SCRIPT
 
