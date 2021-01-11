@@ -55,3 +55,65 @@ if ! sudo apt install chrony
     exit 1
     fi
 
+clear
+
+echo
+echo -e "${COR_AMARELA}| -- CONFIGURANDO O CHRONY -- | ${COR_ORIGINAL}"
+echo
+
+systemctl enable --now chrony
+
+systemctl status chrony
+
+chronyc activity
+
+chronyc sources
+
+chronyc sourcestats
+
+chronyc tracking
+
+clear
+
+echo
+echo -e "${COR_AMARELA}[ALERT] - SERA NECESSARIO ACRESCENTAR ALGUMAS LINHAS APOS ABRIR O EDITOR ${COR_ORIGINAL}"
+echo
+
+echo -e "${COR_VERMELHA}Digite abaixo da linha escrita -> 'information about usable directives.'"
+echo
+
+echo
+echo "server 0.br.pool.ntp.org"
+echo "server 1.br.pool.ntp.org"
+echo "server 2.br.pool.ntp.org"
+echo "server 3.br.pool.ntp.org"
+echo
+
+sudo gedit /etc/chrony/chrony.conf
+
+echo
+echo "Aperte ENTER para continuar:"
+read ''
+
+clear
+
+echo
+echo -e "${COR_AMARELA}| -- REINICIANDO/FINALIZANDO O CHRONY -- | ${COR_ORIGINAL}"
+echo
+
+sudo systemctl restart chrony
+
+chrony sources
+
+chronyc tracking
+
+timedatectl
+
+clear
+
+echo
+echo -e "${COR_VERDE}| -- DATA E HORA SINCRONIZADOS E AUTOMATIZADO -- | ${COR_ORIGINAL}"
+echo
+
+sleep 5
+clear
